@@ -1025,7 +1025,7 @@ async function handleOrder(e) {
 
         // Redirect to WhatsApp with Prefilled Order Data
         const merchantNumber = "917904399942"; 
-        const waMessage = `Hello, I have placed an order.\n\nOrder ID: ${orderId}\nName: ${customerName}\nPhone: ${customerPhone}\nTotal: ₹${orderData.totalAmount}\n\nI have received the quotation PDF.`;
+        const waMessage = `Hi there!, I have placed an order.\n\nOrder ID: ${orderId}\nName: ${customerName}\nPhone: ${customerPhone}\nTotal: ₹${orderData.totalAmount}\n\nI have received the quotation PDF.`;
         const waLink = `https://wa.me/${merchantNumber}?text=${encodeURIComponent(waMessage)}`;
         window.open(waLink, "_blank");
 
