@@ -24,22 +24,22 @@ pipeline {
             }
         }
 
-        stage('Stop Existing Container') {
+                stage('Stop Existing Container') {
             steps {
                 script {
                     sh """
                     echo "Checking if container ${CONTAINER_NAME} exists..."
-                    if [ \$(docker ps -q -f name=${CONTAINER_NAME}) ]; then
-                        echo "Stopping existing container..."
-                        docker stop ${CONTAINER_NAME}
-                        docker rm ${CONTAINER_NAME}
+                    if [ \$(docker ps -a -q -f name=${CONTAINER_NAME}) ]; then
+                        echo "Stopping and removing existing container..."
+                        docker stop ${CONTAINER_NAME} || true
+                        docker rm ${CONTAINER_NAME} || true
                     fi
 
                     echo "Checking if port ${HOST_PORT} is in use..."
                     if [ \$(docker ps -q --filter publish=${HOST_PORT}) ]; then
                         echo "Stopping container using port ${HOST_PORT}..."
-                        docker stop \$(docker ps -q --filter publish=${HOST_PORT})
-                        docker rm \$(docker ps -q --filter publish=${HOST_PORT})
+                        docker stop \$(docker ps -q --filter publish=${HOST_PORT}) || true
+                        docker rm \$(docker ps -q --filter publish=${HOST_PORT}) || true
                     fi
                     """
                 }
