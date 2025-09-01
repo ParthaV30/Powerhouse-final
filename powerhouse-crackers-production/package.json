@@ -1,0 +1,34 @@
+{
+  "name": "powerhouse-crackers",
+  "version": "1.0.0",
+  "description": "Production-ready Powerhouse Crackers e-commerce platform",
+  "private": true,
+  "scripts": {
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm start",
+    "start:dev": "cd backend && npm run dev",
+    "build": "./deployment/scripts/build.sh",
+    "deploy": "./deployment/scripts/deploy.sh",
+    "backup": "./deployment/scripts/backup.sh",
+    "logs": "pm2 logs powerhouse-api",
+    "monitor": "pm2 monit",
+    "restart": "pm2 restart powerhouse-api",
+    "stop": "pm2 stop powerhouse-api",
+    "setup": "./deployment/scripts/setup.sh"
+  },
+  "workspaces": [
+    "backend"
+  ],
+  "keywords": [
+    "fireworks",
+    "ecommerce",
+    "nodejs",
+    "crackers"
+  ],
+  "author": "Powerhouse Crackers Team",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  powerhouse-frontend:
+    image: nginx:alpine
+    container_name: powerhouse-frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./frontend:/usr/share/nginx/html/
+      - ./order-page:/usr/share/nginx/html/order
+      - ./deployment/nginx/powerhouse.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - powerhouse-backend
+    restart: unless-stopped
+
+  powerhouse-backend:
+    image: node:18-alpine
+    container_name: powerhouse-backend
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    command: npm start
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  powerhouse-data:
+    driver: local
+
+networks:
+  default:
+    name: powerhouse-network

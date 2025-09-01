@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerhouse Crackers - Order Now</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo"  style="display: flex; gap: 10px;">
+                     <img src="../logo.jpg" alt="" style="width: 25px; height: 25px;">
+                    <a href="../index.html"><h1 class="logo__text">POWERHOUSE CRACKERS</h1></a>
+                </div>
+                <div class="header__actions">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                        <button class="search-btn" id="searchBtn">🔍</button>
+                    </div>
+                    <button class="cart-btn" id="cartBtn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="page-layout">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="categories">
+                        <h3>Categories</h3>
+                        <ul class="category-list" id="categoryList">
+                            <li><button class="category-btn active" data-category="all">All Products</button></li>
+                            <li><button class="category-btn" data-category="SPARKLERS">Sparklers</button></li>
+                            <li><button class="category-btn" data-category="FLOWERPOTS">Flowerpots</button></li>
+                            <li><button class="category-btn" data-category="GROUND CHAKKARS">Ground Chakkars</button></li>
+                            <li><button class="category-btn" data-category="NOVEL FIREWORKS">Novel Fireworks</button></li>
+                            <li><button class="category-btn" data-category="SOUND CRACKERS">Sound Crackers</button></li>
+                            <li><button class="category-btn" data-category="BIJILI">Bijili</button></li>
+                            <li><button class="category-btn" data-category="BOMBS">Bombs</button></li>
+                            <li><button class="category-btn" data-category="REDFORT MAGIC GREEN CRACKERS (NEW TYPE FANCY)">Redfort Magic Green Crackers (New Type Fancy)</button></li>
+                            <li><button class="category-btn" data-category="ROCKETS">Rockets</button></li>
+                            <li><button class="category-btn" data-category="COLOUR SMOKE">Colour Smoke</button></li>
+                            <li><button class="category-btn" data-category="PAPER/CONFETTI">Paper/Confetti</button></li>
+                            <li><button class="category-btn" data-category="FANCY FIREWORKS">Fancy FireWorks</button></li>
+                            <li><button class="category-btn" data-category="COMETS/PIPE SKY SHOT">Comets/Pipe Sky Shot</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 12 SHOTS (5 VARIANTS)">Multicolour 12 Shots (5 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 20 SHOTS (4 VARIANTS)">Multicolour 20 Shots (4 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 25 SHOTS (3 VARIANTS)">Multicolour 25 Shots (3 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 30 SHOTS (3 VARIANTS)">Multicolour 30 Shots (3 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 40 SHOTS (5 VARIANTS)">Multicolour 40 Shots (5 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 60 SHOTS (4 VARIANTS)">Multicolour 60 Shots (4 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 80 SHOTS (2 VARIANTS)">Multicolour 80 Shots (2 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 100 SHOTS (5 VARIANTS)">Multicolour 100 Shots (5 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 120 SHOTS (3 VARIANTS)">Multicolour 120 Shots (3 Variants)</button></li>
+                            <li><button class="category-btn" data-category="MULTICOLOUR 240 SHOTS">Multicolour 240 Shots</button></li>
+                            <li><button class="category-btn" data-category="0.75 MEGA CAKES">0.75 Mega Cakes</button></li>
+                            <li><button class="category-btn" data-category="1.25 MEGA CAKES">1.25 Mega Cakes</button></li>
+                            <li><button class="category-btn" data-category="0.75 PREMIUM CAKES">0.75 Premium Cakes</button></li>
+                            <li><button class="category-btn" data-category="GIFT BOXES">Gift Boxes</button></li>
+                            <li><button class="category-btn" data-category="ROBIN MATCHES">Robin Matches</button></li>
+                            <li><button class="category-btn" data-category="ROLL CAPS">Roll Caps</button></li>
+                            <li><button class="category-btn" data-category="RINGCAPS">RingCaps</button></li>
+                            <li><button class="category-btn" data-category="RINGCAP GUN (EAGLE BRAND)">RingCap Gun (Eagle Brand)</button></li>
+                            <li><button class="category-btn" data-category="SERPHENT EGG">Serphent Egg</button></li>
+                            <li><button class="category-btn" data-category="EAGLE ROLLCAP GUN">Eagle Rollcap Gun</button></li>
+                            <li><button class="category-btn" data-category="EAGLE RINGCAP GUN">Eagle Ringcap Gun</button></li>
+                            <li><button class="category-btn" data-category="EAGLE 2IN1 (ROLL&RING) GUN">Eagle 2 in 1 (Roll&Ring) Gun</button></li>
+                            <li><button class="category-btn" data-category="LIGHTER STICK">Lighter Stick</button></li>
+                            <li><button class="category-btn" data-category="PAPER BOMB-ALKR">Paper Bomb-ALKR</button></li>
+                            <li><button class="category-btn" data-category="CELEBRATION CRACKERS (REGULAR)">Celebration Crackers (Regular)</button></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <section class="products-section">
+                    <div class="section-header">
+                        <h2 id="sectionTitle">All Products</h2>
+                        <div class="sort-controls">
+                            <select id="sortSelect" class="form-control">
+                                <option value="name">Sort by Name</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="discount">Best Discount</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded here -->
+                    </div>
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <p>No products found matching your search.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-empty" id="cartEmpty">
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-summary" id="cartSummary" style="display: none;">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Original Price:</span>
+                    <span id="originalPrice">₹0</span>
+                </div>
+                <div class="summary-row discount">
+                    <span>You Save:</span>
+                    <span id="savings">₹0</span>
+                </div>
+                <div class="summary-row deliveryCharge">
+                    <span>Delivery Charge:</span>
+                    <span id="deliveryCharges">₹50</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="totalPrice">₹0</span>
+                </div>
+                <button class="btn btn--primary btn--full-width" id="checkoutBtn">Proceed to Checkout</button>
+                <button class="btn btn--outline btn--full-width" id="clearCartBtn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal hidden" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Checkout</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="checkout-form" id="checkoutForm" action="https://formspree.io/f/xqadkyan" method="POST">
+                    <div class="form-group">
+                        <label class="form-label" for="customerName">Full Name *</label>
+                        <input type="text" class="form-control" id="customerName" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="customerPhone">Phone Number *</label>
+                        <input type="tel" class="form-control" id="customerPhone" required placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="customerEmail">Email</label>
+                        <input type="email" class="form-control" id="customerEmail" placeholder="Enter your email (optional)">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="deliveryAddress">Delivery Address *</label>
+                        <textarea class="form-control" id="deliveryAddress" rows="3" required placeholder="Enter Address"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="deliveryState">State *</label>
+                        <select class="form-control" id="deliveryState" required>
+                            <option value="">Select State</option>
+                            <option value="tamil-nadu">Tamil Nadu</option>
+                            <option value="kerala">Kerala</option>
+                            <option value="pondicherry">Pondicherry</option>
+                            <option value="andhra-pradesh">Andhra Pradesh</option>
+                            <option value="telangana">Telangana</option>
+                            <option value="karnataka">Karnataka</option>
+                            <option value="other">Other Major City</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="coupon">Apply Coupon</label>
+                        <input type="text" class="form-control" id="coupon" placeholder="Enter coupon code">
+                        <p id="couponMessage" style="color: green; font-size: 14px;"></p>
+                    </div>
+                    <div class="payment-note">
+                        <p><strong>Note:</strong> Cash on delivery is not available. Payment must be made via Google Pay or Bank Transfer before delivery.</p>
+                    </div>
+                    <div class="order-summary">
+                        <h4>Order Summary</h4>
+                        <div class="checkout-items" id="checkoutItems"></div>
+                        <div class="checkout-total">
+                            <div class="summary-row">
+                                <span>Total Items:</span>
+                                <span id="checkoutItemCount">0</span>
+                            </div>
+                            <div class="summary-row deliveryCharge">
+                             <span>Delivery Charge:</span>
+                            <span id="deliveryCharges">₹50</span>
+                             </div>
+                            <div class="summary-row total">
+                                <span>Total Amount:</span>
+                                <span id="checkoutTotal">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay hidden" id="overlay"></div>
+ <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <h3>POWERHOUSE CRACKERS</h3>
+                        <p>Premium quality fireworks with environmental responsibility</p>
+                    </div>
+                    <div class="footer__links">
+                        <div class="footer__section">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="#delivery">Delivery Areas</a></li>
+                                <li><a href="#eco-friendly">Eco-Friendly</a></li>
+                                <li><a href="#features">Features</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__section">
+                            <h4>Services</h4>
+                            <ul>
+                                <li>Premium Fireworks</li>
+                                <li>Green Crackers</li>
+                                <li>Bulk Orders</li>
+                                <li>Custom Packages</li>
+                            </ul>
+                        </div>
+                        <div class="footer__section">
+                            <h4>Payment</h4>
+                            <ul>
+                                <li>Google Pay</li>
+                                <li>Account Transfer</li>
+                                <li>No COD Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>&copy; 2025 Powerhouse Crackers. All rights reserved. | Committed to quality and environmental safety.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+
+</body>
+</html>
