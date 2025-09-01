@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "powerhouse-app"
         CONTAINER_NAME = "powerhouse-container"
-        HOST_PORT = "8080"
+        HOST_PORT = "8081"
         CONTAINER_PORT = "80"
         REPO_URL = "https://github.com/ParthaV30/Powerhouse-final.git"
     }
