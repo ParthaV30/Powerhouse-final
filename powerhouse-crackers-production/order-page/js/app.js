@@ -818,42 +818,7 @@ function closeCheckout() {
     console.log('Checkout modal closed'); // Debug log
 }
 
-// Update checkout summary
-// function updateCheckoutSummary() {
-//     const checkoutItems = document.getElementById('checkoutItems');
-//     const checkoutItemCount = document.getElementById('checkoutItemCount');
-//     const checkoutTotal = document.getElementById('checkoutTotal');
-//     const deliverCharge = document.getElementById('deliveryCharges');
-//     if (!checkoutItems || !checkoutItemCount || !checkoutTotal) return;
-    
-//     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-//     const totalAmount = cart.reduce((sum, item) => sum + (item.discountPrice * item.quantity), 0);
-//     const totalAmountWithDeliveryCharge = totalAmount + (deliverCharge ? parseInt(deliverCharge.textContent.replace('₹', '')) : 0); // Assuming a fixed delivery charge of ₹50
-//     checkoutItems.innerHTML = cart.map(item => `
-//         <div class="checkout-item">
-//             <span>${item.name} (${item.quantity}x)</span>
-//             <span>₹${item.discountPrice * item.quantity}</span>
-//         </div>
-//     `).join('');
-    
-//     const couponInput = document.getElementById('coupon');
-// if (couponInput) {
-//     const code = couponInput.value.trim().toUpperCase(); // read entered code
 
-//     if (coupons.hasOwnProperty(code)) {
-//         const discountPercent = coupons[code];
-//         const discount = Math.round((discountPercent / 100) * totalAmount);
-
-//         totalAmountWithDeliveryCharge -= discount;
-
-//         showNotification(`🎉 Coupon applied! You saved ₹${discount}`, 'success');
-//     } else if (code !== "") {
-//         showNotification('❌ Invalid coupon code', 'error');
-//     }
-// }
-//     checkoutItemCount.textContent = totalItems;
-//     checkoutTotal.textContent = `₹${totalAmountWithDeliveryCharge}`;
-// }
 
 // Track order count (persist in localStorage so refresh doesn’t reset)
 let orderCount = parseInt(localStorage.getItem("orderCount")) || 0;
@@ -935,123 +900,6 @@ if (checkoutForm) {
 }
 
 // Handle Order
-async function handleOrder(e) {
-    e.preventDefault();
-    
-    const customerName = document.getElementById('customerName').value.trim();
-    const customerPhone = document.getElementById('customerPhone').value.trim();
-    const customerEmail = document.getElementById('customerEmail').value.trim();
-    const deliveryAddress = document.getElementById('deliveryAddress').value.trim();
-    const deliveryState = document.getElementById('deliveryState').value;
-    
-    // Generate Unique Order ID
-    const orderId = `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
-    
-    const orderData = {
-        orderId,
-        customerName,
-        customerPhone,
-        customerEmail,
-        deliveryAddress,
-        deliveryState,
-        items: [...cart],  // assumes cart is global
-        totalAmount: cart.reduce((sum, item) => sum + (item.discountPrice * item.quantity), 0),
-        orderDate: new Date().toLocaleString()
-    };
-    
-    //  Validation for required fields
-    if (!customerName || !customerPhone || !deliveryAddress || !deliveryState) {
-        alert('⚠️ Please fill all required fields');
-        return;
-    }
-    
-    const phoneDigits = customerPhone.replace(/\D/g, '');
-    if (phoneDigits.length !== 10) {
-        alert('⚠️ Please enter a valid 10-digit phone number');
-        return;
-    }
-    
-    if (customerEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerEmail)) {
-        alert('⚠️ Please enter a valid email address');
-        return;
-    }
-    
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    if (!submitBtn) return;
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Processing...';
-    submitBtn.disabled = true;
-    
-    try {
-        //  Send order to email using Formspree email api
-        await fetch("https://formspree.io/f/xqadkyan", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(orderData)
-        });
-
-        // To generate PDF Quotation using jsPDF
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
-
-        doc.setFontSize(18);
-        doc.text("Order Quotation", 14, 20);
-
-        doc.setFontSize(12);
-        doc.text(`Order ID: ${orderId}`, 14, 28);
-        doc.text(`Name: ${customerName}`, 14, 36);
-        doc.text(`Phone: ${customerPhone}`, 14, 43);
-        doc.text(`Email: ${customerEmail || "N/A"}`, 14, 50);
-        doc.text(`Address: ${deliveryAddress}`, 14, 57);
-        doc.text(`State: ${deliveryState}`, 14, 64);
-        doc.text(`Payment: ${paymentMethod}`, 14, 71);
-        doc.text(`Date: ${orderData.orderDate}`, 14, 78);
-
-        // Table data
-        const tableData = orderData.items.map(item => [
-            item.name, item.quantity, `₹${item.discountPrice}`, `₹${item.quantity * item.discountPrice}`
-        ]);
-
-        doc.autoTable({
-            head: [['Item', 'Qty', 'Price', 'Total']],
-            body: tableData,
-            startY: 85
-        });
-
-        doc.text(`Grand Total: ₹${orderData.totalAmount}`, 14, doc.lastAutoTable.finalY + 10);
-
-        // Download the Quotation PDF
-        doc.save(`Quotation_${orderId}.pdf`);
-
-        // Redirect to WhatsApp with Prefilled Order Data
-        const merchantNumber = "917904399942"; 
-        const waMessage = `Hello, I have placed an order.\n\nOrder ID: ${orderId}\nName: ${customerName}\nPhone: ${customerPhone}\nTotal: ₹${orderData.totalAmount}\n\nI have received the quotation PDF.`;
-        const waLink = `https://wa.me/${merchantNumber}?text=${encodeURIComponent(waMessage)}`;
-        window.open(waLink, "_blank");
-
-        alert('Order placed! Quotation downloaded. Redirecting to WhatsApp...');
-
-        // Clear the cart so after the order new cart items can be ordered for next order
-        cart = [];
-        updateCartDisplay();
-        e.target.reset();
-
-    } catch (err) {
-        console.error(err);
-        alert('Error occurred! Please try again.');
-    }
-    
-    submitBtn.textContent = originalText;
-    submitBtn.disabled = false;
-}
-
-
-
-
-// if (checkoutForm) {
-//     checkoutForm.addEventListener('submit', handleOrder);
-// }
-
 // async function handleOrder(e) {
 //     e.preventDefault();
     
@@ -1060,77 +908,249 @@ async function handleOrder(e) {
 //     const customerEmail = document.getElementById('customerEmail').value.trim();
 //     const deliveryAddress = document.getElementById('deliveryAddress').value.trim();
 //     const deliveryState = document.getElementById('deliveryState').value;
-//     const paymentMethod = document.getElementById('paymentMethod').value;
+    
+//     // Generate Unique Order ID
+//     const orderId = `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
     
 //     const orderData = {
+//         orderId,
 //         customerName,
 //         customerPhone,
 //         customerEmail,
 //         deliveryAddress,
 //         deliveryState,
-//         paymentMethod,
-//         items: [...cart],  // assumes cart is globally available
+//         items: [...cart],  // assumes cart is global
 //         totalAmount: cart.reduce((sum, item) => sum + (item.discountPrice * item.quantity), 0),
-//         orderDate: new Date().toISOString()
+//         orderDate: new Date().toLocaleString()
 //     };
     
-//     // ✅ Validate required fields
-//     if (!customerName || !customerPhone || !deliveryAddress || !deliveryState || !paymentMethod) {
-//         showNotification('Please fill all required fields', 'error');
+//     //  Validation for required fields
+//     if (!customerName || !customerPhone || !deliveryAddress || !deliveryState) {
+//         alert('⚠️ Please fill all required fields');
 //         return;
 //     }
     
-//     // ✅ Validate phone number
 //     const phoneDigits = customerPhone.replace(/\D/g, '');
-//     if (!validatePhone(phoneDigits)) {
-//         showNotification('Please enter a valid 10-digit phone number', 'error');
+//     if (phoneDigits.length !== 10) {
+//         alert('⚠️ Please enter a valid 10-digit phone number');
 //         return;
 //     }
     
-//     // ✅ Validate email (optional)
-//     if (customerEmail && !validateEmail(customerEmail)) {
-//         showNotification('Please enter a valid email address', 'error');
+//     if (customerEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerEmail)) {
+//         alert('⚠️ Please enter a valid email address');
 //         return;
 //     }
     
-//     // ✅ Submit button state
 //     const submitBtn = e.target.querySelector('button[type="submit"]');
 //     if (!submitBtn) return;
-    
 //     const originalText = submitBtn.textContent;
-//     submitBtn.textContent = 'Processing Order...';
+//     submitBtn.textContent = 'Processing...';
 //     submitBtn.disabled = true;
     
 //     try {
-//         // ✅ Send order to Formspree
-//         const response = await fetch("https://formspree.io/f/xqadkyan", {
+//         //  Send order to email using Formspree email api
+//         await fetch("https://formspree.io/f/xqadkyan", {
 //             method: "POST",
 //             headers: { "Content-Type": "application/json" },
 //             body: JSON.stringify(orderData)
 //         });
 
-//         if (response.ok) {
-//             showNotification('✅ Order placed successfully! We will call you soon for confirmation and payment details.', 'success');
-            
-//             // Clear cart & close modal
-//             cart = [];
-//             updateCartDisplay();
-//             closeCart();
-//             closeCheckout();
-            
-//             // Reset form
-//             e.target.reset();
-//         } else {
-//             showNotification('⚠️ Failed to place order. Please try again.', 'error');
-//         }
+//         // To generate PDF Quotation using jsPDF
+//         const { jsPDF } = window.jspdf;
+//         const doc = new jsPDF();
+//         console.log("formspree1 called");
+//         doc.setFontSize(18);
+//         doc.text("Order Quotation", 14, 20);
+
+//         doc.setFontSize(12);
+//         doc.text(`Order ID: ${orderId}`, 14, 28);
+//         doc.text(`Name: ${customerName}`, 14, 36);
+//         doc.text(`Phone: ${customerPhone}`, 14, 43);
+//         doc.text(`Email: ${customerEmail || "N/A"}`, 14, 50);
+//         doc.text(`Address: ${deliveryAddress}`, 14, 57);
+//         doc.text(`State: ${deliveryState}`, 14, 64);
+//         doc.text(`Date: ${orderData.orderDate}`, 14, 78);
+//  console.log("formspree1 called 2");
+//         // Table data
+//         const tableData = orderData.items.map(item => [
+//             item.name, item.quantity, `₹${item.discountPrice}`, `₹${item.quantity * item.discountPrice}`
+//         ]);
+
+//         doc.autoTable({
+//             head: [['Item', 'Qty', 'Price', 'Total']],
+//             body: tableData,
+//             startY: 85
+//         });
+
+//         doc.text(`Grand Total: ₹${orderData.totalAmount}`, 14, doc.lastAutoTable.finalY + 10);
+
+//         // Download the Quotation PDF
+//         doc.save(`Quotation_${orderId}.pdf`);
+//  console.log("formspree1 called3");
+//         // Redirect to WhatsApp with Prefilled Order Data
+//         const merchantNumber = "917904399942"; 
+//         const waMessage = `Hello, I have placed an order.\n\nOrder ID: ${orderId}\nName: ${customerName}\nPhone: ${customerPhone}\nTotal: ₹${orderData.totalAmount}\n\nI have received the quotation PDF.`;
+//         const waLink = `https://wa.me/${merchantNumber}?text=${encodeURIComponent(waMessage)}`;
+//         window.open(waLink, "_blank");
+
+//         alert('Order placed! Quotation downloaded. Redirecting to WhatsApp...');
+
+//         // Clear the cart so after the order new cart items can be ordered for next order
+//         cart = [];
+//         updateCartDisplay();
+//         e.target.reset();
+
 //     } catch (err) {
-//         showNotification('🚨 Network error. Please check your connection.', 'error');
+//         console.error(err);
+//         console.log(err);
+//         // alert('Error occurred! Please try again.');
 //     }
     
-//     // ✅ Reset button
 //     submitBtn.textContent = originalText;
 //     submitBtn.disabled = false;
 // }
+
+// let cart = []; // your cart array should be filled from addToCart()
+
+function generateOrderText(items) {
+  let text = "🛒 Order Details\n\n";
+  text += "Item            | Qty | Price | Total\n";
+  text += "----------------|-----|-------|-------\n";
+  items.forEach(item => {
+    text += `${item.name} | ${item.quantity} | ₹${item.discountPrice} | ₹${item.quantity * item.discountPrice}\n`;
+  });
+  text += `\nTOTAL: ₹${items.reduce((sum, i) => sum + i.quantity * i.discountPrice, 0)}\n`;
+  return text;
+}
+
+async function handleOrder(e) {
+  e.preventDefault();
+
+  const customerName = document.getElementById('customerName').value.trim();
+  const customerPhone = document.getElementById('customerPhone').value.trim();
+  const customerEmail = document.getElementById('customerEmail').value.trim();
+  const deliveryAddress = document.getElementById('deliveryAddress').value.trim();
+  const deliveryState = document.getElementById('deliveryState').value;
+
+  const orderId = `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+  const orderDate = new Date().toLocaleString();
+
+  const orderDetails = `
+Order ID: ${orderId}
+Name: ${customerName}
+Phone: ${customerPhone}
+Email: ${customerEmail || "N/A"}
+Address: ${deliveryAddress}, ${deliveryState}
+Date: ${orderDate}
+
+${generateOrderText(cart)}
+  `;
+
+  const submitBtn = e.target.querySelector('button[type="submit"]');
+  if (!submitBtn) return;
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Processing...';
+  submitBtn.disabled = true;
+
+  try {
+    // --- 1️⃣ Email to Merchant ---
+    await fetch("https://formsubmit.co/ajax/powerhouse.org.in@gmail.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        subject: `🛒 New Order - ${orderId}`,
+        message: orderDetails
+      })
+    });
+
+    // --- 2️⃣ Email to Customer ---
+    if (customerEmail) {
+      await fetch("https://formsubmit.co/ajax/" + customerEmail, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          subject: `✅ Order Confirmation - ${orderId}`,
+          message: `Hello ${customerName},\n\nThank you for your order!\n\n${orderDetails}\n\n🌟 Welcome to our store!`
+        })
+      });
+    }
+// To generate PDF Quotation using jsPDF
+const orderData = {
+    orderId,
+    customerName,
+    customerPhone,
+    customerEmail,
+    deliveryAddress,
+    deliveryState,
+    items: [...cart],
+    totalAmount: cart.reduce((sum, item) => sum + (item.discountPrice * item.quantity), 0),
+    orderDate: new Date().toLocaleString()
+  };
+    const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+  doc.setFontSize(18);
+  doc.text("Order Quotation", 14, 20);
+
+  doc.setFontSize(12);
+  doc.text(`Order ID: ${orderData.orderId}`, 14, 28);
+  doc.text(`Name: ${orderData.customerName}`, 14, 36);
+  doc.text(`Phone: ${orderData.customerPhone}`, 14, 43);
+  doc.text(`Email: ${orderData.customerEmail || "N/A"}`, 14, 50);
+  doc.text(`Address: ${orderData.deliveryAddress}`, 14, 57, { maxWidth: 180 });
+  doc.text(`State: ${orderData.deliveryState}`, 14, 64);
+  doc.text(`Date: ${orderData.orderDate}`, 14, 78);
+
+  // Table
+  const tableData = orderData.items.map(item => [
+    item.name,
+    item.quantity,
+    `₹${item.discountPrice}`,
+    `₹${item.quantity * item.discountPrice}`
+  ]);
+
+  doc.autoTable({
+    head: [['Item', 'Qty', 'Price', 'Total']],
+    body: tableData,
+    startY: 85
+  });
+
+  doc.text(
+    `Grand Total: ₹${orderData.totalAmount}`,
+    14,
+    doc.lastAutoTable.finalY + 10
+  );
+
+  doc.save(`Quotation_${orderData.orderId}.pdf`);
+    // --- 3️⃣ WhatsApp Redirect ---
+    const merchantNumber = "917904399942"; // your number
+    const waMessage = `📦 New Order!\n\n${orderDetails}`;
+    const waLink = `https://wa.me/${merchantNumber}?text=${encodeURIComponent(waMessage)}`;
+    window.open(waLink, "_blank");
+
+    alert("✅ Order placed! Emails sent and WhatsApp opened.");
+
+    // Reset cart + form
+    cart = [];
+    updateCartDisplay(); // make sure this function exists
+    e.target.reset();
+
+  } catch (err) {
+    console.error("❌ Error:", err);
+    alert("Error occurred! Please try again.");
+  }
+
+  submitBtn.textContent = originalText;
+  submitBtn.disabled = false;
+}
+
+// Attach listener
+// const checkoutForm = document.getElementById('checkoutForm');
+// if (checkoutForm) {
+//   checkoutForm.addEventListener('submit', handleOrder);
+// }
+
+
+
 
 // Notification system
 function showNotification(message, type = 'info') {

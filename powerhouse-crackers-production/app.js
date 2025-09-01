@@ -1,3 +1,128 @@
+// background
+const canvas = document.getElementById("fireworks");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    let stars = [];
+
+    // --- STAR CLASS (Sparkling stars) ---
+    class Star {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 1.5;
+        this.alpha = Math.random();
+        this.twinkle = Math.random() * 0.05;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 215, 180, ${this.alpha})`;
+        ctx.fill();
+      }
+      update() {
+        this.alpha += this.twinkle;
+        if (this.alpha <= 0 || this.alpha >= 1) this.twinkle = -this.twinkle;
+        this.draw();
+      }
+    }
+
+    // --- FIREWORK PARTICLE ---
+    class Particle {
+      constructor(x, y, color, velocity) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.velocity = velocity;
+        this.life = 0;
+        this.maxLife = 80 + Math.random() * 20;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+      update() {
+        this.x += this.velocity.x;
+        this.y += this.velocity.y;
+        this.velocity.x *= 0.98;
+        this.velocity.y *= 0.98;
+        this.life++;
+        this.draw();
+      }
+    }
+
+    // --- FIREWORK EXPLOSION ---
+    function createFirework(x, y) {
+      const colors = ["#ffcc00", "#ff6699", "#66ccff", "#ff9966", "#ff66ff"];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      const count = 100;
+      for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 * i) / count;
+        const speed = Math.random() * 5 + 2;
+        particles.push(
+          new Particle(x, y, color, {
+            x: Math.cos(angle) * speed,
+            y: Math.sin(angle) * speed
+          })
+        );
+      }
+    }
+
+    // --- SHOOTING STAR ---
+    function drawShootingStar() {
+      if (Math.random() < 0.003) {
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height * 0.5;
+        let length = Math.random() * 300 + 100;
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x - length, y + length / 3);
+        ctx.strokeStyle = "rgba(255,255,255,0.8)";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+    }
+
+    // --- INIT STARS ---
+    for (let i = 0; i < 200; i++) stars.push(new Star());
+
+    // --- ANIMATE ---
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      stars.forEach((s) => s.update());
+      drawShootingStar();
+
+      particles.forEach((p, i) => {
+        if (p.life > p.maxLife) {
+          particles.splice(i, 1);
+        } else {
+          p.update();
+        }
+      });
+
+      if (Math.random() < 0.05) {
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height * 0.6;
+        createFirework(x, y);
+      }
+    }
+
+    animate();
+
+    // Resize handling
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
