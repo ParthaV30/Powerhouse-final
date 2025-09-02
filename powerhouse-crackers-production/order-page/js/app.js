@@ -103,7 +103,7 @@ const productData = {
   {"name": "HYDROGEN BOMBS (10PCS)", "package": "1BOX", "actualPrice": 1580, "discountPrice": 790, "image": "BOMBS/product-featured-182.jpg"},
   {"name": "SILVER BOMB(10PCS)", "package": "1BOX", "actualPrice": 1700, "discountPrice": 850, "image": "BOMBS/product-featured-343.jpg"},
   {"name": "COLOUR FLASH (5PCS)", "package": "1BOX", "actualPrice": 2100, "discountPrice": 1050, "image": "BOMBS/product-featured-195.jpg"},
-  {"name": "ATOM BOMBS(10PCS)", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "gBOMBS/product-featured-181.jpg"},
+  {"name": "ATOM BOMBS(10PCS)", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "BOMBS/product-featured-181.jpg"},
   {"name": "FANTASTIC SSS BOMB (6PCS)", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "BOMBS/product-featured-186.jpg"},
   {"name": "THUNDER BOMB (10PCS)", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "BOMBS/product-featured-183.jpg"},
   {"name": "COLOUR BURST (10PCS)", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "BOMBS/product-featured-185.jpg"},
