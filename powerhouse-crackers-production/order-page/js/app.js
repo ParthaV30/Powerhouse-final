@@ -1,7 +1,5 @@
 const coupons = {
-    PR20: 20,
-    PR10: 10,
-    PR5: 5
+    S77CHSM: 20
 };
 
 // Product data from Powerhouse Crackers
@@ -723,7 +721,6 @@ function updateCartDisplay() {
 // Update cart summary
 function updateCartSummary() {
     const subtotalEl = document.getElementById('subtotal');
-    const deliverCharge = document.getElementById('deliveryCharges');
     const originalPriceEl = document.getElementById('originalPrice');
     const savingsEl = document.getElementById('savings');
     const totalPriceEl = document.getElementById('totalPrice');
@@ -733,12 +730,13 @@ function updateCartSummary() {
     const subtotal = cart.reduce((sum, item) => sum + (item.discountPrice * item.quantity), 0);
     const originalTotal = cart.reduce((sum, item) => sum + (item.actualPrice * item.quantity), 0);
     const savings = originalTotal - subtotal;
-    const totalAmount=subtotal+(deliverCharge ? parseInt(deliverCharge.textContent.replace('₹', '')) : 0);
+    
     subtotalEl.textContent = `₹${subtotal}`;
     originalPriceEl.textContent = `₹${originalTotal}`;
     savingsEl.textContent = `₹${savings}`;
-    totalPriceEl.textContent = totalAmount;
+    totalPriceEl.textContent = `₹${subtotal}`; // total is now same as subtotal
 }
+
 
 // Update cart item quantity
 function updateCartItemQuantity(itemId, delta) {
@@ -824,44 +822,39 @@ function closeCheckout() {
 let orderCount = parseInt(localStorage.getItem("orderCount")) || 0;
 const maxCouponOrders = 5; // Only first 5 orders can use coupons
 
-// Event listener for coupon input
-const couponInput = document.getElementById("coupon");
-if (couponInput) {
-    couponInput.addEventListener("input", () => {
-        updateCheckoutSummary();
-    });
-}
-
 function updateCheckoutSummary() {
     const checkoutItems = document.getElementById('checkoutItems');
     const checkoutItemCount = document.getElementById('checkoutItemCount');
     const checkoutTotal = document.getElementById('checkoutTotal');
-    const deliveryChargeElem = document.getElementById('deliveryCharges');
+    const couponInput = document.getElementById("coupon");
     const couponMessage = document.getElementById('couponMessage');
 
-    if (!checkoutItems || !checkoutItemCount || !checkoutTotal) return;
+    if (!checkoutItems || !checkoutItemCount || !checkoutTotal || !couponInput) return;
 
     // Cart totals
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     const totalAmount = cart.reduce((sum, item) => sum + (item.discountPrice * item.quantity), 0);
 
-    // Delivery charge
-    const deliveryCharge = deliveryChargeElem 
-        ? parseInt(deliveryChargeElem.textContent.replace('₹', '')) || 0 
-        : 0;
+    // Enable or disable coupon input based on total amount
+    if (totalAmount > 2000) {
+        couponInput.disabled = false;
+        couponMessage.textContent = ""; // clear message
+    } else {
+        couponInput.disabled = true;
+        couponMessage.textContent = "Coupon is eligible only for purchases above ₹2000";
+        couponMessage.style.color = "Green";
+        couponMessage.style.marginTop = "5px";
+    }
 
-    let totalAmountWithDeliveryCharge = totalAmount + deliveryCharge;
+    let totalAmountWithDiscount = totalAmount;
 
-    // Coupon handling
+    // Apply coupon if eligible
     const code = couponInput.value.trim().toUpperCase();
-    couponMessage.textContent = ""; // clear old msg
-
-    if (code && coupons.hasOwnProperty(code)) {
-        if (orderCount < maxCouponOrders) { 
+    if (!couponInput.disabled && code && coupons.hasOwnProperty(code)) {
+        if (orderCount < maxCouponOrders) {
             const discountPercent = coupons[code];
             const discount = Math.round((discountPercent / 100) * totalAmount);
-
-            totalAmountWithDeliveryCharge -= discount;
+            totalAmountWithDiscount -= discount;
 
             couponMessage.textContent = `🎉 Coupon applied! You saved ₹${discount}`;
             couponMessage.style.color = "green";
@@ -880,8 +873,9 @@ function updateCheckoutSummary() {
     `).join('');
 
     checkoutItemCount.textContent = totalItems;
-    checkoutTotal.textContent = `₹${totalAmountWithDeliveryCharge}`;
+    checkoutTotal.textContent = `₹${totalAmountWithDiscount}`;
 }
+
 
 // When order is placed successfully
 function completeOrder() {
@@ -1312,3 +1306,13 @@ function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
+
+ // Open sidebar
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.add("active");
+  });
+
+  // Close sidebar
+  sidebarClose.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+  });
