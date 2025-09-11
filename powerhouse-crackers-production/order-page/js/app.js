@@ -227,7 +227,7 @@ const productData = {
  ],
  
  "MULTICOLOUR 80 SHOTS (2 VARIANTS)": [
-  {"name": "80 SHOTS CYBORG", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "MULTICOLOUR 80 SHOTS/product-featured-41.jpg"},
+  {"name": "80 SHOTS CYBORG", "package": "1BOX", "actualPrice":3100, "discountPrice":1500, "image": "MULTICOLOUR 80 SHOTS/product-featured-41.jpg"},
   {"name": "80 SHOTS ROBBY", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "MULTICOLOUR 80 SHOTS/product-featured-42.jpg"},
  ],
  
