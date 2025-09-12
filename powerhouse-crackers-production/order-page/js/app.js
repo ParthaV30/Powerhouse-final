@@ -1,6 +1,7 @@
 const coupons = {
     PR20: 20,
     PR10: 10,
+    S77CHSM:100,
     PR5: 5
 };
 
