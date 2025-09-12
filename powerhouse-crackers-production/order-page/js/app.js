@@ -1,12 +1,5 @@
 const coupons = {
-<<<<<<< HEAD
-    PR20: 20,
-    PR10: 10,
-    S77CHSM:100,
-    PR5: 5
-=======
     S77CHSM: 20
->>>>>>> dev
 };
 
 // Product data from Powerhouse Crackers
