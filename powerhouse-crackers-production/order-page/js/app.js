@@ -5,17 +5,17 @@ const coupons = {
 // Product data from Powerhouse Crackers
 const productData = {
   "SPARKLERS": [
-    {"name": "BOBY GOLD SPARKLERS 7CM(10pcs)", "package": "1BOX", "actualPrice": 90, "discountPrice": 35, "image": "SPARKLERS/image_5.jpg"},
-    {"name": "BOBBY CRACKLINGS SPARKLERS 7CM(10PCS)", "package": "1BOX", "actualPrice": 70, "discountPrice": 40, "image": "SPARKLERS/product-featured-111.jpg"},
-    {"name": "12CM 4 COLOUR SPARKLERS (10PCS)", "package": "1BOX", "actualPrice": 100, "discountPrice": 50, "image": "SPARKLERS/product-featured-295.jpg"},
-    {"name": "12CM RED SPARKLERS (10PCS)", "package": "1BOX", "actualPrice": 108, "discountPrice": 54, "image": "SPARKLERS/product-featured-344.jpg"},
+    {"name": "BOBY GOLD SPARKLERS 7CM(10pcs)", "package": "1BOX", "actualPrice": 50, "discountPrice": 20, "image": "SPARKLERS/image_5.jpg"},
+    {"name": "BOBBY CRACKLINGS SPARKLERS 10CM(10PCS)", "package": "1BOX", "actualPrice": 62, "discountPrice":26 , "image": "SPARKLERS/product-featured-111.jpg"},
+    {"name": "12CM 4 COLOUR SPARKLERS (10PCS)", "package": "1BOX", "actualPrice": 100, "discountPrice": 44, "image": "SPARKLERS/product-featured-295.jpg"},
+    {"name": "12CM RED SPARKLERS (10PCS)", "package": "1BOX", "actualPrice": 108, "discountPrice": 48, "image": "SPARKLERS/product-featured-344.jpg"},
     {"name": "LEMON TREE SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 150, "discountPrice": 80, "image": "SPARKLERS/product-featured-122.jpg"},
-    {"name": "RED SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 166, "discountPrice": 83, "image": "SPARKLERS/product-featured-119.jpg"},
-    {"name": "GOLD SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 176, "discountPrice": 88, "image": "SPARKLERS/product-featured-112.jpg"},
-    {"name": "GOLD SPARKLERS 30CM(5PCS)", "package": "1BOX", "actualPrice": 176, "discountPrice": 88, "image": "SPARKLERS/product-featured-114.jpg"},
-    {"name": "CRACKLING SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 198, "discountPrice": 99, "image": "SPARKLERS/product-featured-113.jpg"},
-    {"name": "CRACKLING SPARKLERS 30CM(5PCS)", "package": "1BOX", "actualPrice": 198, "discountPrice": 99, "image": "SPARKLERS/product-featured-115.jpg"},
-    {"name": "LAVENDER SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 208, "discountPrice": 104, "image": "SPARKLERS/product-featured-123.jpg"},
+    {"name": "RED SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 166, "discountPrice": 63, "image": "SPARKLERS/product-featured-119.jpg"},
+    {"name": "GOLD SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 176, "discountPrice": 68, "image": "SPARKLERS/product-featured-112.jpg"},
+    {"name": "GOLD SPARKLERS 30CM(5PCS)", "package": "1BOX", "actualPrice": 176, "discountPrice": 76, "image": "SPARKLERS/product-featured-114.jpg"},
+    {"name": "CRACKLING SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 198, "discountPrice": 76, "image": "SPARKLERS/product-featured-113.jpg"},
+    {"name": "CRACKLING SPARKLERS 30CM(5PCS)", "package": "1BOX", "actualPrice": 198, "discountPrice": 86, "image": "SPARKLERS/product-featured-115.jpg"},
+    {"name": "LAVENDER SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 208, "discountPrice": 78, "image": "SPARKLERS/product-featured-123.jpg"},
     {"name": "ROBIN ELECTRIC SPARKLERS 50CM(5PCS)", "package": "1TUBE", "actualPrice": 420, "discountPrice": 210, "image": "SPARKLERS/product-featured-116.jpg"},
     {"name": "ROBIN COLOUR SPARKLERS 50CM(5PCS)", "package": "1TUBE", "actualPrice": 480, "discountPrice": 240, "image": "SPARKLERS/product-featured-117.jpg"},
     {"name": "TRI COLOUR 15CM(30PCS)", "package": "1BOX", "actualPrice": 522, "discountPrice": 261, "image": "SPARKLERS/product-featured-278.jpg"},
@@ -23,18 +23,18 @@ const productData = {
   ],
 
   "FLOWERPOTS": [
-    {"name": "LITTLE FLOWER (1PC)", "package": "1BOX", "actualPrice": 148, "discountPrice": 74, "image": "FLOWERPOTS/product-featured-141.jpg"},
+    {"name": "LITTLE FLOWER (1PC)", "package": "1BOX", "actualPrice": 148, "discountPrice": 62, "image": "FLOWERPOTS/product-featured-141.jpg"},
     {"name": "THE GREAT SPLENDOUR FOUNTAIN (1PC)", "package": "1BOX", "actualPrice": 172, "discountPrice": 86, "image": "FLOWERPOTS/product-featured-135.jpg"},
-    {"name": "FLOWERPOT SMALL(10PCS)", "package": "1BOX", "actualPrice": 192, "discountPrice": 110, "image": "FLOWERPOTS/product-featured-139.jpg"},
+    {"name": "FLOWERPOT SMALL(10PCS)", "package": "1BOX", "actualPrice": 192, "discountPrice": 86, "image": "FLOWERPOTS/product-featured-139.jpg"},
     {"name": "JET FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 212, "discountPrice": 106, "image": "FLOWERPOTS/product-featured-126.jpg"},
-    {"name": "FLOWERPOTS BIG(10PCS)", "package": "1BOX", "actualPrice": 348, "discountPrice": 174, "image": "FLOWERPOTS/product-featured-345.jpg"},
+    {"name": "FLOWERPOTS BIG(10PCS)", "package": "1BOX", "actualPrice": 348, "discountPrice": 130, "image": "FLOWERPOTS/product-featured-345.jpg"},
     {"name": "JET FOUNTAINS (10PCS)", "package": "1BOX", "actualPrice": 400, "discountPrice": 200, "image": "FLOWERPOTS/product-featured-127.jpg"},
-    {"name": "FLOWERPOTS SPECIAL (10PCS)", "package": "1BOX", "actualPrice": 466, "discountPrice": 233, "image": "FLOWERPOTS/product-featured-137.jpg"},
+    {"name": "FLOWERPOTS SPECIAL (10PCS)", "package": "1BOX", "actualPrice": 466, "discountPrice": 173, "image": "FLOWERPOTS/product-featured-137.jpg"},
     {"name": "CHEERS FOUNTAIN (3PCS)", "package": "1BOX", "actualPrice": 474, "discountPrice": 237, "image": "FLOWERPOTS/product-featured-129.jpg"},
-    {"name": "FLOWERPOTS DELUXE (5PCS)", "package": "1BOX", "actualPrice": 622, "discountPrice": 320, "image": "FLOWERPOTS/product-featured-140.jpg"},
-    {"name": "JEWEL POTS FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 648, "discountPrice": 324, "image": "FLOWERPOTS/product-featured-138.jpg"},
+    {"name": "FLOWERPOTS DELUXE (5PCS)", "package": "1BOX", "actualPrice": 622, "discountPrice": 285, "image": "FLOWERPOTS/product-featured-140.jpg"},
+    {"name": "JEWEL POTS FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 648, "discountPrice": 315, "image": "FLOWERPOTS/product-featured-138.jpg"},
     {"name": "JADE FLOWERS FOUNTAIN(5PCS)", "package": "1BOX", "actualPrice": 664, "discountPrice": 170, "image": "FLOWERPOTS/product-featured-136.jpg"},
-    {"name": "HAPPINESS FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 666, "discountPrice": 333, "image": "FLOWERPOTS/product-featured-143.jpg"},
+    {"name": "HAPPINESS FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 666, "discountPrice": 300, "image": "FLOWERPOTS/product-featured-143.jpg"},
     {"name": "SUNDROPS FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 676, "discountPrice": 338, "image": "FLOWERPOTS/product-featured-144.jpg"},
     {"name": "MONEY PENNY FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 676, "discountPrice": 338, "image": "FLOWERPOTS/product-featured-145.jpg"},
     {"name": "POPCORN FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 748, "discountPrice": 374, "image": "FLOWERPOTS/product-featured-297.jpg"},
@@ -60,9 +60,9 @@ const productData = {
     {"name": "SCARY SCREAM(4PCS)", "package": "1BOX", "actualPrice": 488, "discountPrice": 244, "image": "GROUND CHAKKARS/product-featured-334.jpg"},
     {"name": "ZAMIN CHAKKARS DELUXE (10PCS)", "package": "1BOX", "actualPrice": 494, "discountPrice": 247, "image": "GROUND CHAKKARS/product-featured-147.jpg"},
     {"name": "ZAMIN CHAKKARS SUPER DELUXE (10PCS)", "package": "1BOX", "actualPrice": 546, "discountPrice": 273, "image": "GROUND CHAKKARS/product-featured-148.jpg"},
-    {"name": "DOLLAR WHEEL(5PCS)", "package": "1BOX", "actualPrice": 690, "discountPrice": 345, "image": "GROUND CHAKKARS/product-featured-248.jpg"},
-    {"name": "POKER WHEEL (5PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 346, "image": "GROUND CHAKKARS/product-featured-155.jpg"},
-    {"name": "CUCKOO WHEEL (5PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 346, "image": "GROUND CHAKKARS/product-featured-156.jpg"}
+    {"name": "DOLLAR WHEEL(5PCS)", "package": "1BOX", "actualPrice": 690, "discountPrice": 220, "image": "GROUND CHAKKARS/product-featured-248.jpg"},
+    {"name": "POKER WHEEL (5PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 246, "image": "GROUND CHAKKARS/product-featured-155.jpg"},
+    {"name": "CUCKOO WHEEL (5PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 246, "image": "GROUND CHAKKARS/product-featured-156.jpg"}
   ],
 
   "NOVEL FIREWORKS": [
@@ -79,33 +79,33 @@ const productData = {
   ],
 
   "SOUND CRACKERS": [
-    {"name": "SPARROW6.5CM(5PCS)", "package": "1PKT", "actualPrice": 66, "discountPrice": 32, "image": "SOUND CRACKERS/product-featured-8.jpg"},
-    {"name": "9CM PEACOCK (5PCS)", "package": "1PKT", "actualPrice": 80, "discountPrice": 35, "image": "SOUND CRACKERS/product-featured-172.jpg"},
-    {"name": "10CM LAKSHMI (5PCS)", "package": "1PKT", "actualPrice": 89, "discountPrice": 50, "image": "SOUND CRACKERS/product-featured-173.jpg"},
-    {"name": "10CM KRISHNA (5PCS)", "package": "1PKT", "actualPrice": 110, "discountPrice": 55, "image": "SOUND CRACKERS/product-featured-174.jpg"},
-    {"name": "10CM HITLER (5PCS)", "package": "1PKT", "actualPrice": 140, "discountPrice": 62, "image": "SOUND CRACKERS/product-featured-175.jpg"},
-    {"name": "9CM TWO SOUND (5PCS)", "package": "1PKT", "actualPrice": 88, "discountPrice": 66, "image": "SOUND CRACKERS/product-featured-176.jpg"},
+    {"name": "SPARROW6.5CM(5PCS)", "package": "1PKT", "actualPrice": 66, "discountPrice": 25, "image": "SOUND CRACKERS/product-featured-8.jpg"},
+    {"name": "9CM PEACOCK (5PCS)", "package": "1PKT", "actualPrice": 80, "discountPrice": 28, "image": "SOUND CRACKERS/product-featured-172.jpg"},
+    {"name": "10CM LAKSHMI (5PCS)", "package": "1PKT", "actualPrice": 89, "discountPrice": 32, "image": "SOUND CRACKERS/product-featured-173.jpg"},
+    {"name": "10CM KRISHNA (5PCS)", "package": "1PKT", "actualPrice": 110, "discountPrice": 40, "image": "SOUND CRACKERS/product-featured-174.jpg"},
+    {"name": "10CM HITLER (5PCS)", "package": "1PKT", "actualPrice": 140, "discountPrice": 42, "image": "SOUND CRACKERS/product-featured-175.jpg"},
+    {"name": "9CM TWO SOUND (5PCS)", "package": "1PKT", "actualPrice": 88, "discountPrice": 50, "image": "SOUND CRACKERS/product-featured-176.jpg"},
     {"name": "10CM HERCULES DELUXE(5PCS)", "package": "1PKT", "actualPrice": 160, "discountPrice": 70, "image": "SOUND CRACKERS/product-featured-177.jpg"},
-    {"name": "TWO SOUND GIANT (5PCS)", "package": "1PKT", "actualPrice": 168, "discountPrice": 74, "image": "SOUND CRACKERS/product-featured-178.jpg"}
+    {"name": "TWO SOUND GIANT (5PCS)", "package": "1PKT", "actualPrice": 168, "discountPrice": 68, "image": "SOUND CRACKERS/product-featured-178.jpg"}
   ],
 
   "BIJILI": [
     {"name": "BIJILI RED(50PCS)", "package": "1PKT", "actualPrice": 90, "discountPrice": 48, "image": "BIJILI/product-featured-9.jpg"},
     {"name": "GIANT BIJILI (50PCS)", "package": "1PKT", "actualPrice": 142, "discountPrice": 52, "image": "BIJILI/product-featured-327.jpg"},
-    {"name": "RED BIJILI (100PCS)", "package": "1PKT", "actualPrice": 170, "discountPrice": 98, "image": "BIJILI/product-featured-180.jpg"},
-    {"name": "STRIPPED BIJILI(100PCS)", "package": "1PKT", "actualPrice": 198, "discountPrice": 102, "image": "BIJILI/product-featured-298.jpg"}
+    {"name": "RED BIJILI (100PCS)", "package": "1PKT", "actualPrice": 170, "discountPrice": 85, "image": "BIJILI/product-featured-180.jpg"},
+    {"name": "STRIPPED BIJILI(100PCS)", "package": "1PKT", "actualPrice": 198, "discountPrice": 95, "image": "BIJILI/product-featured-298.jpg"}
   ],
 
  "BOMBS": [
-  {"name": "BULLET BOMBS (10PCS)", "package": "1BOX", "actualPrice": 480, "discountPrice": 180, "image": "BOMBS/product-featured-10.jpg"},
-  {"name": "HYDROGEN BOMBS (10PCS)", "package": "1BOX", "actualPrice": 380, "discountPrice": 140, "image": "BOMBS/product-featured-182.jpg"},
-  {"name": "Fury BOMB (10PCS)", "package": "1BOX", "actualPrice": 411, "discountPrice": 185, "image": "BOMBS/product-featured-343.jpg"},
-  {"name": "999 DELUX BOX(5PCS)", "package": "1BOX", "actualPrice": 486, "discountPrice": 280, "image": "BOMBS/product-featured-195.jpg"},
-  {"name": "ATOM BOMBS (10PCS) BIG", "package": "1BOX", "actualPrice": 500, "discountPrice": 260, "image": "BOMBS/product-featured-181.jpg"},
-  {"name": "LEO BOMBS (5PCS)", "package": "1BOX", "actualPrice": 510, "discountPrice": 198, "image": "BOMBS/product-featured-186.jpg"},
-  {"name": "THUNDER BOMB (10PCS)", "package": "1BOX", "actualPrice": 630, "discountPrice": 390, "image": "BOMBS/product-featured-183.jpg"},
+  {"name": "BULLET BOMBS (10PCS)", "package": "1BOX", "actualPrice": 220, "discountPrice": 100, "image": "BOMBS/product-featured-10.jpg"},
+  {"name": "HYDROGEN BOMBS (10PCS)", "package": "1BOX", "actualPrice": 280, "discountPrice": 120, "image": "BOMBS/product-featured-182.jpg"},
+  {"name": "Fury BOMB (10PCS)", "package": "1BOX", "actualPrice": 350, "discountPrice": 140, "image": "BOMBS/product-featured-343.jpg"},
+  {"name": "999 DELUX BOX(5PCS)", "package": "1BOX", "actualPrice": 200, "discountPrice": 90, "image": "BOMBS/product-featured-195.jpg"},
+  {"name": "ATOM BOMBS (10PCS) SPL", "package": "1BOX", "actualPrice": 500, "discountPrice": 260, "image": "BOMBS/product-featured-181.jpg"},
+  {"name": "LEO BOMBS (5PCS)", "package": "1BOX", "actualPrice": 510, "discountPrice": 95, "image": "BOMBS/product-featured-186.jpg"},
+  {"name": "THUNDER BOMB (10PCS)", "package": "1BOX", "actualPrice": 630, "discountPrice": 190, "image": "BOMBS/product-featured-183.jpg"},
   {"name": "COLOUR BURST (10PCS)", "package": "1BOX", "actualPrice": 670, "discountPrice": 400, "image": "BOMBS/product-featured-185.jpg"},
-  {"name": "FLOWER BOMB (GANGA JAMUNA)(5PCS)", "package": "1BOX", "actualPrice": 700, "discountPrice": 300, "image": "BOMBS/product-featured-187.jpg"},
+  {"name": "FLOWER BOMB (GANGA JAMUNA)(5PCS)", "package": "1BOX", "actualPrice": 700, "discountPrice": 150, "image": "BOMBS/product-featured-187.jpg"},
   ],
 
  "REDFORT MAGIC GREEN CRACKERS (NEW TYPE FANCY)": [
@@ -113,21 +113,21 @@ const productData = {
   ],
 
  "ROCKETS": [
-    {"name": "SURVEYOR ROCKETS(10PCS)", "package": "1BOX", "actualPrice": 196, "discountPrice": 80, "image": "ROCKETS/product-featured-13.jpg"},
-    {"name": "RAINBOW ROCKETS (10PCS)", "package": "1BOX", "actualPrice": 324, "discountPrice": 162, "image": "ROCKETS/product-featured-190.jpg"},
-    {"name": "BOMB ROCKET(10PCS)", "package": "1BOX", "actualPrice": 358, "discountPrice": 179, "image": "ROCKETS/product-featured-189.jpg"},
+    {"name": "BABY ROCKETS(10PCS)", "package": "1BOX", "actualPrice": 196, "discountPrice": 70, "image": "ROCKETS/product-featured-13.jpg"},
+    {"name": "RAINBOW ROCKETS (10PCS)", "package": "1BOX", "actualPrice": 324, "discountPrice": 100, "image": "ROCKETS/product-featured-190.jpg"},
+    {"name": "BOMB ROCKET(10PCS)", "package": "1BOX", "actualPrice": 358, "discountPrice": 145, "image": "ROCKETS/product-featured-189.jpg"},
     {"name": "MUSICAL ROCKETS ((10PCS)", "package": "1BOX", "actualPrice": 566, "discountPrice": 210, "image": "ROCKETS/product-featured-192.jpg"},
     {"name": "2 SOUND ROCKET (10PCS)", "package": "1BOX", "actualPrice": 568, "discountPrice": 264, "image": "ROCKETS/product-featured-191.jpg"},
-    {"name": "PARACHUTE ROCKETS (5PCS)", "package": "1BOX", "actualPrice": 1438, "discountPrice": 719, "image": "ROCKETS/product-featured-194.jpg"}
+    {"name": "LUNIK ROCKETS (10PCS)", "package": "1BOX", "actualPrice": 438, "discountPrice": 230, "image": "ROCKETS/product-featured-194.jpg"}
   ],
 
  "COLOUR SMOKE": [
   {"name": "COLOUR FOG FOUNTAIN (5PCS)", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "COLOUR SMOKE/product-featured-197.jpg"},
   {"name": "RAINBOW FOG (2PCS)", "package": "1BOX", "actualPrice": 324, "discountPrice": 162, "image": "COLOUR SMOKE/product-featured-14.jpg"},
   {"name": "LITTLE DRAGON (5PCS)", "package": "1BOX", "actualPrice": 358, "discountPrice": 179, "image": "COLOUR SMOKE/product-featured-200.jpg"},
-  {"name": "OLYMPIC TORCH (1PC)", "package": "1BOX", "actualPrice": 566, "discountPrice": 283, "image": "COLOUR SMOKE/product-featured-198.jpg"},
-  {"name": "VIBGYOR (1PC)", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "COLOUR SMOKE/product-featured-199.jpg"},
-  {"name": "RAINBOW FOG (5PCS)", "package": "1BOX", "actualPrice": 1438, "discountPrice": 59, "image": "COLOUR SMOKE/product-featured-196.jpg"}
+  {"name": "OLYMPIC TORCH (1PC)", "package": "1BOX", "actualPrice": 148, "discountPrice": 283, "image": "COLOUR SMOKE/product-featured-198.jpg"},
+  {"name": "VIBGYOR (1PC)", "package": "1BOX", "actualPrice": 180, "discountPrice": 284, "image": "COLOUR SMOKE/product-featured-199.jpg"},
+  {"name": "RAINBOW FOG (5PCS)", "package": "1BOX", "actualPrice": 1438, "discountPrice": 590, "image": "COLOUR SMOKE/product-featured-196.jpg"}
   ],
  "PAPER/CONFETTI": [
   {"name": "MAGIC SPRAY CONFETTI (5PCS)", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "PAPERCONFETTI/product-featured-202.jpg"},
@@ -296,21 +296,21 @@ const productData = {
     {"name": "PRIZE 20 GIFTBOX", "package": "1BOX", "actualPrice": 1180, "discountPrice": 590, "image": "GIFT BOXES/product-featured-75.jpg"},
     {"name": "GOD'S GIFT 25 GIFTBOX", "package": "1BOX", "actualPrice": 1580, "discountPrice": 790, "image": "GIFT BOXES/product-featured-76.jpg"},
     {"name": "SUPER 28 GIFTBOX", "package": "1BOX", "actualPrice": 1700, "discountPrice": 850, "image": "GIFT BOXES/product-featured-81.jpg"},
-    {"name": "GREAT 31 GIFTBOX", "package": "1BOX", "actualPrice": 2100, "discountPrice": 1050, "image": "GIFT BOXES/product-featured-83.jpg"},
-    {"name": "WONDERFUL 34 GIFTBOX", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "GIFT BOXES/product-featured-84.jpg"},
-    {"name": "FANTASTIC 37 GIFTBOX", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "GIFT BOXES/product-featured-85.jpg"},
-    {"name": "KHUSHI 42 GIFTBOX", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "GIFT BOXES/product-featured-89.jpg"},
-    {"name": "JUBILEE 46 GIFTBOX", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "GIFT BOXES/product-featured-92.jpg"},
-    {"name": "TITAN 55 GIFTBOX", "package": "1BOX", "actualPrice": 5150, "discountPrice": 2575, "image": "GIFT BOXES/product-featured-94.jpg"},
-    {"name": "NEW PARADISE 27 GIFTBOX", "package": "1BOX", "actualPrice": 9180, "discountPrice": 4590, "image": "GIFT BOXES/product-featured-95.jpg"}
+    {"name": "GREAT 31 GIFTBOX", "package": "1BOX", "actualPrice": 2100, "discountPrice": 950, "image": "GIFT BOXES/product-featured-83.jpg"},
+    {"name": "WONDERFUL 34 GIFTBOX", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1100, "image": "GIFT BOXES/product-featured-84.jpg"},
+    {"name": "FANTASTIC 37 GIFTBOX", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1220, "image": "GIFT BOXES/product-featured-85.jpg"},
+    {"name": "KHUSHI 42 GIFTBOX", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1400, "image": "GIFT BOXES/product-featured-89.jpg"},
+    {"name": "JUBILEE 46 GIFTBOX", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1650, "image": "GIFT BOXES/product-featured-92.jpg"},
+    {"name": "TITAN 55 GIFTBOX", "package": "1BOX", "actualPrice": 5150, "discountPrice": 1900, "image": "GIFT BOXES/product-featured-94.jpg"},
+    {"name": "NEW COUPLE PACK SPECIAL VIP-70", "package": "1BOX", "actualPrice": 5600, "discountPrice": 3400, "image": "GIFT BOXES/product-featured-95.jpg"}
 ],
 "ROBIN MATCHES": [
-  {"name": "CONE 3 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "ROBIN MATCHES/product-featured-96.jpg"},
-  {"name": "KING 6 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "ROBIN MATCHES/product-featured-97.jpg"},
-  {"name": "SUPER DELUXE 10 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "ROBIN MATCHES/product-featured-98.jpg"},
-  {"name": "CLASSIC 5 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "ROBIN MATCHES/product-featured-99.jpg"},
-  {"name": "7UP RAINBOW MATCHBOX", "package": "1BOX", "actualPrice": 5150, "discountPrice": 2575, "image": "ROBIN MATCHES/product-featured-100.jpg"},
-  {"name": "VIP 10 in 1 MATCHBOX", "package": "1BOX", "actualPrice": 9180, "discountPrice": 4590, "image": "ROBIN MATCHES/product-featured-101.jpg"}
+  {"name": "CONE 3 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 300, "discountPrice": 120, "image": "ROBIN MATCHES/product-featured-96.jpg"},
+  {"name": "KING 6 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 320, "discountPrice": 140, "image": "ROBIN MATCHES/product-featured-97.jpg"},
+  {"name": "SUPER DELUXE 10 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 320, "discountPrice": 140, "image": "ROBIN MATCHES/product-featured-98.jpg"},
+  {"name": "CLASSIC 5 IN 1 MATCHBOX", "package": "1BOX", "actualPrice": 320, "discountPrice": 140, "image": "ROBIN MATCHES/product-featured-99.jpg"},
+  {"name": "7UP RAINBOW MATCHBOX", "package": "1BOX", "actualPrice": 400, "discountPrice": 160, "image": "ROBIN MATCHES/product-featured-100.jpg"},
+  {"name": "VIP 10 in 1 MATCHBOX", "package": "1BOX", "actualPrice": 410, "discountPrice": 150, "image": "ROBIN MATCHES/product-featured-101.jpg"}
 ],
 
 "ROLL CAPS": [
@@ -327,37 +327,37 @@ const productData = {
     ],
     
     "SERPHENT EGG": [
-        {"name": "BLACK SERPHENT BIG", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "SERPHENT EGG/product-featured-246.jpg"},
-        {"name": "ANACONDA EGG", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "SERPHENT EGG/product-featured-351.jpg"}
+        {"name": "BLACK SERPHENT BIG", "package": "1BOX", "actualPrice": 568, "discountPrice": 150, "image": "SERPHENT EGG/product-featured-246.jpg"},
+        {"name": "ANACONDA EGG", "package": "1BOX", "actualPrice": 568, "discountPrice": 150, "image": "SERPHENT EGG/product-featured-351.jpg"}
     ],
     
     "EAGLE ROLLCAP GUN": [
-         {"name": "TOM COLOUR GUN", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "EAGLE ROLLCAP GUN/product-featured-268.jpg"},
-  {"name": "JICK BLACK GUN", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "EAGLE ROLLCAP GUN/product-featured-271.jpg"},
-  {"name": "HAWAK GUN", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "EAGLE ROLLCAP GUN/product-featured-269.jpg"},
-  {"name": "JERRY GUN", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "EAGLE ROLLCAP GUN/product-featured-273.jpg"},
-  {"name": "TYSON GUN", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "EAGLE ROLLCAP GUN/product-featured-270.jpg"},
-  {"name": "BHOOT GUN", "package": "1BOX", "actualPrice": 5150, "discountPrice": 2575, "image": "EAGLE ROLLCAP GUN/product-featured-274.jpg"},
-  {"name": "THUNDER GUN", "package": "1BOX", "actualPrice": 9180, "discountPrice": 4590, "image": "EAGLE ROLLCAP GUN/product-featured-272.jpg"}
+  {"name": "TOM COLOUR GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 50, "image": "EAGLE ROLLCAP GUN/product-featured-268.jpg"},
+  {"name": "JICK BLACK GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 55, "image": "EAGLE ROLLCAP GUN/product-featured-271.jpg"},
+  {"name": "HAWAK GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 50, "image": "EAGLE ROLLCAP GUN/product-featured-269.jpg"},
+  {"name": "JERRY GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 50, "image": "EAGLE ROLLCAP GUN/product-featured-273.jpg"},
+  {"name": "TYSON GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 40, "image": "EAGLE ROLLCAP GUN/product-featured-270.jpg"},
+  {"name": "BHOOT GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 55, "image": "EAGLE ROLLCAP GUN/product-featured-274.jpg"},
+  {"name": "THUNDER GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 55, "image": "EAGLE ROLLCAP GUN/product-featured-272.jpg"}
     ],
     
     "EAGLE RINGCAP GUN": [
-   {"name": "EXCELL 2 GUN", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "EAGLE RINGCAP GUN/product-featured-265.jpg"},
-  {"name": "EXCELL 2 COLOUR GUN", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "EAGLE RINGCAP GUN/product-featured-262.jpg"},
-  {"name": "EXCELL 5 GUN", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "EAGLE RINGCAP GUN/product-featured-264.jpg"},
-  {"name": "EXCELL 4 COLOUR GUN", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "EAGLE RINGCAP GUN/product-featured-263.jpg"},
-  {"name": "EXCELL 12 COLOUR GUN", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "EAGLE RINGCAP GUN/product-featured-261.jpg"},
-  {"name": "EXCELL 7 COLOR GUN", "package": "1BOX", "actualPrice": 5150, "discountPrice": 2575, "image": "EAGLE RINGCAP GUN/product-featured-254.jpg"},
-  {"name": "EXCELL 9 SMALL GUN", "package": "1BOX", "actualPrice": 9180, "discountPrice": 4590, "image": "EAGLE RINGCAP GUN/product-featured-253.jpg"}
+   {"name": "EXCELL 2 GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 50, "image": "EAGLE RINGCAP GUN/product-featured-265.jpg"},
+  {"name": "EXCELL 2 COLOUR GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 60, "image": "EAGLE RINGCAP GUN/product-featured-262.jpg"},
+  {"name": "EXCELL 5 GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 50, "image": "EAGLE RINGCAP GUN/product-featured-264.jpg"},
+  {"name": "EXCELL 4 COLOUR GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 55, "image": "EAGLE RINGCAP GUN/product-featured-263.jpg"},
+  {"name": "EXCELL 12 COLOUR GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 50, "image": "EAGLE RINGCAP GUN/product-featured-261.jpg"},
+  {"name": "EXCELL 7 COLOR GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 40, "image": "EAGLE RINGCAP GUN/product-featured-254.jpg"},
+  {"name": "EXCELL 9 SMALL GUN", "package": "1BOX", "actualPrice": 150, "discountPrice": 60, "image": "EAGLE RINGCAP GUN/product-featured-253.jpg"}
     ],
 
     "EAGLE 2IN1 (ROLL&RING) GUN": [
-        {"name": "EXCELL 11 COLOUR GUN", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "EAGLE 2IN1 (ROLL&RING) GUN/product-featured-252.jpg"}
+        {"name": "EXCELL 11 COLOUR GUN", "package": "1BOX", "actualPrice": 568, "discountPrice": 170, "image": "EAGLE 2IN1 (ROLL&RING) GUN/product-featured-252.jpg"}
     ],
     
     "LIGHTER STICK": [
-        {"name": "LIGHTER BLACK STICK (2PCS)", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "LIGHTER STICK/product-featured-275.jpg"},
-        {"name": "POPPOP(12BOX)", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "LIGHTER STICK/product-featured-350.jpg"}
+        {"name": "LIGHTER BLACK STICK (2PCS)", "package": "1BOX", "actualPrice": 60, "discountPrice": 12, "image": "LIGHTER STICK/product-featured-275.jpg"},
+        {"name": "POPPOP(5BOX)", "package": "1BOX", "actualPrice": 100, "discountPrice": 50, "image": "LIGHTER STICK/product-featured-350.jpg"}
     ],
     
     "PAPER BOMB-ALKR": [
@@ -367,16 +367,16 @@ const productData = {
     ],
     
     "CELEBRATION CRACKERS (REGULAR)": [
-  {"name": "28 GAINT", "package": "1BOX", "actualPrice": 1180, "discountPrice": 590, "image": "CELEBRATION CRACKERS/product-featured-289.jpg"},
-  {"name": "56 GAINT", "package": "1BOX", "actualPrice": 1580, "discountPrice": 790, "image": "CELEBRATION CRACKERS/product-featured-290.jpg"},
-  {"name": "100(0.1K)", "package": "1BOX", "actualPrice": 1700, "discountPrice": 850, "image": "CELEBRATION CRACKERS/product-featured-342.jpg"},
-  {"name": "24 DELUX", "package": "1BOX", "actualPrice": 2100, "discountPrice": 1050, "image": "CELEBRATION CRACKERS/product-featured-328.jpg"},
-  {"name": "50 DELUX", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "CELEBRATION CRACKERS/product-featured-329.jpg"},
-  {"name": "100 DELUX", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "CELEBRATION CRACKERS/product-featured-341.jpg"},
-  {"name": "1000(1K)", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "CELEBRATION CRACKERS/product-featured-292.jpg"},
-  {"name": "2000(2K)", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "CELEBRATION CRACKERS/product-featured-294.jpg"},
-  {"name": "5000(5K)", "package": "1BOX", "actualPrice": 5150, "discountPrice": 2575, "image": "CELEBRATION CRACKERS/product-featured-291.jpg"},
-  {"name": "10000(10K)", "package": "1BOX", "actualPrice": 9180, "discountPrice": 4590, "image": "CELEBRATION CRACKERS/product-featured-293.jpg"}
+  {"name": "28 GAINT", "package": "1BUNDLE", "actualPrice": 1180, "discountPrice": 230, "image": "CELEBRATION CRACKERS/product-featured-289.jpg"},
+  {"name": "56 GAINT", "package": "1BUNDLE", "actualPrice": 1580, "discountPrice": 450, "image": "CELEBRATION CRACKERS/product-featured-290.jpg"},
+  {"name": "100(0.1K)", "package": "1BUNDLE", "actualPrice": 1700, "discountPrice": 500, "image": "CELEBRATION CRACKERS/product-featured-342.jpg"},
+  {"name": "24 DELUX", "package": "1BUNDLE", "actualPrice": 2100, "discountPrice": 550, "image": "CELEBRATION CRACKERS/product-featured-328.jpg"},
+  {"name": "50 DELUX", "package": "1BUNDLE", "actualPrice": 2500, "discountPrice": 600, "image": "CELEBRATION CRACKERS/product-featured-329.jpg"},
+  {"name": "100 DELUX", "package": "1BUNDLE", "actualPrice": 2860, "discountPrice": 710, "image": "CELEBRATION CRACKERS/product-featured-341.jpg"},
+  {"name": "1000(1K)", "package": "1BUNDLE", "actualPrice": 3480, "discountPrice": 390, "image": "CELEBRATION CRACKERS/product-featured-292.jpg"},
+  {"name": "2000(2K)", "package": "1BUNDLE", "actualPrice": 3760, "discountPrice": 570, "image": "CELEBRATION CRACKERS/product-featured-294.jpg"},
+  {"name": "5000(5K)", "package": "1BUNDLE", "actualPrice": 5150, "discountPrice": 2575, "image": "CELEBRATION CRACKERS/product-featured-291.jpg"},
+  {"name": "10000(10K)", "package": "1BUNDLE", "actualPrice": 9180, "discountPrice": 4590, "image": "CELEBRATION CRACKERS/product-featured-293.jpg"}
   ],
 
 };
