@@ -226,25 +226,25 @@ const productData = {
  
  "MULTICOLOUR 80 SHOTS (2 VARIANTS)": [
   {"name": "80 SHOTS CYBORG", "package": "1BOX", "actualPrice":3100, "discountPrice":1500, "image": "MULTICOLOUR 80 SHOTS/product-featured-41.jpg"},
-  {"name": "80 SHOTS ROBBY", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "MULTICOLOUR 80 SHOTS/product-featured-42.jpg"},
+  {"name": "80 SHOTS ROBBY", "package": "1BOX", "actualPrice": 3100, "discountPrice": 1700, "image": "MULTICOLOUR 80 SHOTS/product-featured-42.jpg"},
  ],
  
  "MULTICOLOUR 100 SHOTS (5 VARIANTS)": [
-     {"name": "100 SHOTS SPEED METRO", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "MULTICOLOUR 100 SHOTS/product-featured-43.jpg"},
-     {"name": "100 SHOTS SPEED BULLET TRACK", "package": "1BOX", "actualPrice": 324, "discountPrice": 162, "image": "MULTICOLOUR 100 SHOTS/product-featured-44.jpg"},
-     {"name": "100 SHOTS EAT R", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "MULTICOLOUR 100 SHOTS/product-featured-45.jpg"},
-     {"name": "100 SHOTS MATRIX", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "MULTICOLOUR 100 SHOTS/product-featured-46.jpg"},
-     {"name": "100 SHOTS ROBOBEE", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "MULTICOLOUR 100 SHOTS/product-featured-47.jpg"}
+     {"name": "100 SHOTS SPEED METRO", "package": "1BOX", "actualPrice": 3700, "discountPrice": 1900, "image": "MULTICOLOUR 100 SHOTS/product-featured-43.jpg"},
+     {"name": "100 SHOTS SPEED BULLET TRACK", "package": "1BOX", "actualPrice": 3780, "discountPrice": 1920, "image": "MULTICOLOUR 100 SHOTS/product-featured-44.jpg"},
+     {"name": "100 SHOTS EAT R", "package": "1BOX", "actualPrice": 3800, "discountPrice": 1930, "image": "MULTICOLOUR 100 SHOTS/product-featured-45.jpg"},
+     {"name": "100 SHOTS MATRIX", "package": "1BOX", "actualPrice": 3850, "discountPrice": 1940, "image": "MULTICOLOUR 100 SHOTS/product-featured-46.jpg"},
+     {"name": "100 SHOTS ROBOBEE", "package": "1BOX", "actualPrice": 3900, "discountPrice": 1950, "image": "MULTICOLOUR 100 SHOTS/product-featured-47.jpg"}
   ],
 
  "MULTICOLOUR 120 SHOTS (3 VARIANTS)": [
-  {"name": "120 SHOTS RIX", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "MULTICOLOUR 120 SHOTS/product-featured-48.jpg"},
-  {"name": "120 SHOTS SAFFIRE", "package": "1BOX", "actualPrice": 324, "discountPrice": 162, "image": "MULTICOLOUR 120 SHOTS/product-featured-49.jpg"},
-  {"name": "120 SHOTS MEET SPOT", "package": "1BOX", "actualPrice": 568, "discountPrice": 284, "image": "MULTICOLOUR 120 SHOTS/product-featured-50.jpg"}
+  {"name": "120 SHOTS RIX", "package": "1BOX", "actualPrice": 4100, "discountPrice": 2300, "image": "MULTICOLOUR 120 SHOTS/product-featured-48.jpg"},
+  {"name": "120 SHOTS SAFFIRE", "package": "1BOX", "actualPrice": 4150, "discountPrice": 2300, "image": "MULTICOLOUR 120 SHOTS/product-featured-49.jpg"},
+  {"name": "120 SHOTS MEET SPOT", "package": "1BOX", "actualPrice": 4200, "discountPrice": 2300, "image": "MULTICOLOUR 120 SHOTS/product-featured-50.jpg"}
   ],
 
  "MULTICOLOUR 240 SHOTS": [
-  {"name": "240 SHOTS RAINBOW DANCE", "package": "1BOX", "actualPrice": 196, "discountPrice": 98, "image": "MULTICOLOUR 240 SHOTS/product-featured-21.jpg"},
+  {"name": "240 SHOTS RAINBOW DANCE", "package": "1BOX", "actualPrice": 6500, "discountPrice": 3800, "image": "MULTICOLOUR 240 SHOTS/product-featured-21.jpg"},
   ],
 
  "0.75 MEGA CAKES": [
@@ -273,17 +273,17 @@ const productData = {
   ],
 
  "1.25 MEGA CAKES": [
-  {"name": "CANNON BALLS 25", "package": "1BOX", "actualPrice": 1180, "discountPrice": 590, "image": "1.25 MEGA CAKES/product-featured-321.jpg"},
-  {"name": "FANTASIA 25", "package": "1BOX", "actualPrice": 1580, "discountPrice": 790, "image": "1.25 MEGA CAKES/product-featured-322.jpg"},
-  {"name": "GOLDEN DAWN 25", "package": "1BOX", "actualPrice": 1700, "discountPrice": 850, "image": "1.25 MEGA CAKES/product-featured-323.jpg"},
-  {"name": "SHOOTING STAR", "package": "1BOX", "actualPrice": 2100, "discountPrice": 1050, "image": "1.25 MEGA CAKES/product-featured-324.jpg"},
-  {"name": "STAR BLASTER 25", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "1.25 MEGA CAKES/product-featured-325.jpg"},
-  {"name": "HAPPY DAY 25", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "1.25 MEGA CAKES/product-featured-340.jpg"},
-  {"name": "MYSTICAL NIGHT 25", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "1.25 MEGA CAKES/product-featured-314.jpg"},
-  {"name": "DOLPHIN DIVE 25", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "1.25 MEGA CAKES/product-featured-72.jpg"},
-  {"name": "JEWEL OF INDIA 25", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "1.25 MEGA CAKES/product-featured-313.jpg"},
-  {"name": "BEAUTY 50", "package": "1BOX", "actualPrice": 5150, "discountPrice": 2575, "image": "1.25 MEGA CAKES/product-featured-73.jpg"},
-  {"name": "KALIEDOSCOPE 100", "package": "1BOX", "actualPrice": 9180, "discountPrice": 4590, "image": "1.25 MEGA CAKES/product-featured-74.jpg"}
+  {"name": "SOUND OF RAIN", "package": "1BOX", "actualPrice": 150, "discountPrice": 70, "image": "1.25 MEGA CAKES/product-featured-321.jpg"},
+  {"name": "COLOR SMOKE", "package": "1BOX", "actualPrice": 820, "discountPrice": 430, "image": "1.25 MEGA CAKES/product-featured-322.jpg"},
+  {"name": "SIVAKASI SPECIAL", "package": "1BOX", "actualPrice": 400, "discountPrice": 150, "image": "1.25 MEGA CAKES/product-featured-323.jpg"},
+  {"name": "SIREN SHOWER", "package": "2 PCS", "actualPrice": 460, "discountPrice": 230, "image": "1.25 MEGA CAKES/product-featured-324.jpg"},
+  {"name": "FANCY FLASH", "package": "1BOX", "actualPrice": 450, "discountPrice": 200, "image": "1.25 MEGA CAKES/product-featured-325.jpg"},
+  {"name": "MONEY VAULT", "package": "1BOX", "actualPrice": 130, "discountPrice": 60, "image": "1.25 MEGA CAKES/product-featured-340.jpg"},
+  {"name": "DORA NIGHT", "package": "1BOX", "actualPrice": 250, "discountPrice": 125, "image": "1.25 MEGA CAKES/product-featured-314.jpg"},
+  {"name": "HOLO AMIGO", "package": "2 PCS", "actualPrice": 150, "discountPrice": 80, "image": "1.25 MEGA CAKES/product-featured-72.jpg"},
+  {"name": "HOLY COLOR SMOKE STICK", "package": "1BOX", "actualPrice":200, "discountPrice": 60, "image": "1.25 MEGA CAKES/product-featured-313.jpg"},
+  {"name": "PARTY CRUSH", "package": "1BOX", "actualPrice": 160, "discountPrice": 55, "image": "1.25 MEGA CAKES/product-featured-73.jpg"},
+  {"name": "HELICOPTER", "package": "1BOX", "actualPrice": 350, "discountPrice": 190, "image": "1.25 MEGA CAKES/product-featured-74.jpg"}
 ],
 
 "0.75 PREMIUM CAKES": [
