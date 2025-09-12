@@ -1403,6 +1403,11 @@ body {
   margin-bottom: var(--space-12);
 }
 
+#coupon:disabled {
+  background: #e0e0e0;
+  color: #888;         
+  cursor: not-allowed;
+}
 .checkout-item {
   display: flex;
   justify-content: space-between;
@@ -1470,15 +1475,67 @@ body {
     width: 200px;
   }
 }
+.sidebar-toggle {
+      display: none;
+    }
+    .sidebar-close{
+      display: none;
+    }
 
 @media (max-width: 768px) {
   .page-layout {
     grid-template-columns: 1fr;
   }
   
-  .sidebar {
-    position: static;
-    margin-bottom: var(--space-24);
+  .sidebar-toggle {
+        display: block;
+        background: var(--powerhouse-dark-1);
+        color: white;
+        border: none;
+        padding: 12px 16px;
+        font-size: 16px;
+        border-radius: var(--radius-lg);
+        cursor: pointer;
+        margin-bottom: var(--space-16);
+        width: 100%;
+        text-align: left;
+      }
+
+      /* Sidebar Close Button */
+      .sidebar-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 16px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      /* Sidebar as drawer */
+      .sidebar {
+        position: fixed;
+        top: 110px;
+        left: -100%;
+        width: 80%;
+        height: fit-content;
+        background: var(--powerhouse-dark-1);
+        padding: var(--space-24);
+        border-radius: 0;
+        border: none;
+        transition: left 0.3s ease-in-out;
+        z-index: 999;
+        overflow-y: auto;
+      }
+
+      .sidebar.active {
+        left: 0;
+      }
+
+    .section-header{
+    display: none;
   }
   
   .cart-sidebar {
