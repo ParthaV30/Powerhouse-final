@@ -1,5 +1,5 @@
 const coupons = {
-    S77CHSM: 20
+    S77CHSM: 5
 };
 
 // Product data from Powerhouse Crackers
@@ -177,7 +177,7 @@ const productData = {
   {"name": "MULTI COLOR FALLS (1PCS)", "package": "1BOX", "actualPrice": 1700, "discountPrice": 900, "image": "FANCY FIREWORKS/product-featured-231.jpg"}
   ],
 
-  "COMETS/COLRFUL FOUNTAINS": [
+  "COMETS/COLORFULL FOUNTAINS": [
   {"name": "PEACOCK FEATHER-MAGICAL(1PCS)", "package": "1BOX", "actualPrice": 600, "discountPrice": 300, "image": "COMETSPIPE SKY SHOT/product-featured-105.jpg"},
   {"name": "2 IN 1 FLOWER POT (10PCS)", "package": "1BOX", "actualPrice": 1100, "discountPrice": 530, "image": "COMETSPIPE SKY SHOT/product-featured-106.jpg"},
   {"name": "3 WONDERS (3 IN 1)FOUNTAIN(1PCS)", "package": "1BOX", "actualPrice":550, "discountPrice": 265, "image": "COMETSPIPE SKY SHOT/product-featured-335.jpg"},
@@ -861,7 +861,12 @@ function updateCheckoutSummary() {
     checkoutItemCount.textContent = totalItems;
     checkoutTotal.textContent = `₹${totalAmountWithDiscount}`;
 }
-
+const couponInput = document.getElementById("coupon");
+if (couponInput) {
+    couponInput.addEventListener("input", () => {
+        updateCheckoutSummary();
+    });
+}
 
 // When order is placed successfully
 function completeOrder() {
@@ -888,6 +893,22 @@ function generateOrderText(items) {
   });
   text += `\nTOTAL: ₹${items.reduce((sum, i) => sum + i.quantity * i.discountPrice, 0)}\n`;
   return text;
+}
+function loadImageAsBase64(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous'; // Important for CORS
+    img.onload = function () {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      resolve(canvas.toDataURL('image/png'));
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
 }
 
 async function handleOrder(e) {
@@ -953,13 +974,19 @@ const orderData = {
     totalAmount: cart.reduce((sum, item) => sum + (item.discountPrice * item.quantity), 0),
     orderDate: new Date().toLocaleString()
   };
+//   const logoUrl = "/powerhouse-crackers-production/logo.png"; // Update this path
+
+// const base64Logo = await loadImageAsBase64(logoUrl);
     const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
+    //   doc.addImage(base64Logo, 'PNG', 150, 10, 40, 15);
   doc.setFontSize(18);
-  doc.text("Order Quotation", 14, 20);
+  doc.text("Power House Crackers", 14, 20);
+  doc.text("Reserve Quotation", 14, 20);
+
 
   doc.setFontSize(12);
-  doc.text(`Order ID: ${orderData.orderId}`, 14, 28);
+  doc.text(`Reserve ID: ${orderData.orderId}`, 14, 28);
   doc.text(`Name: ${orderData.customerName}`, 14, 36);
   doc.text(`Phone: ${orderData.customerPhone}`, 14, 43);
   doc.text(`Email: ${orderData.customerEmail || "N/A"}`, 14, 50);
