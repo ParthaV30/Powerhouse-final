@@ -138,22 +138,22 @@ const productData = {
   ],
 
 "FANCY FIREWORKS": [
-  {"name": "ELECTRIC STONES (10PCS)", "package": "1BOX", "actualPrice": 104, "discountPrice": 40, "image": "FANCY FIREWORKS/product-featured-16.jpg"},
+  {"name": "ELECTRIC STONES (10PCS)", "package": "1BOX", "actualPrice": 104, "discountPrice": 30, "image": "FANCY FIREWORKS/product-featured-16.jpg"},
   {"name": "FATBOY (1PC)", "package": "1BOX", "actualPrice": 148, "discountPrice": 74, "image": "FANCY FIREWORKS/product-featured-206.jpg"},
   {"name": "ASSORTED CARTOONS (10PCS)", "package": "1BOX", "actualPrice": 224, "discountPrice": 140, "image": "FANCY FIREWORKS/product-featured-205.jpg"},
   {"name": "DISCO FLASH (6PCS)", "package": "1BOX", "actualPrice": 234, "discountPrice": 150, "image": "FANCY FIREWORKS/product-featured-208.jpg"},
   {"name": "ARIEAL FANCY OUT(10PCS)", "package": "1BOX", "actualPrice": 234, "discountPrice":70, "image": "FANCY FIREWORKS/product-featured-211.jpg"},
   {"name": "COLOUR CHANGING BUTTERFLY (5PCS)", "package": "1BOX", "actualPrice": 306, "discountPrice": 153, "image": "FANCY FIREWORKS/product-featured-212.jpg"},
   {"name": "JUMPING FROG (6PCS)", "package": "1BOX", "actualPrice": 340, "discountPrice": 170, "image": "FANCY FIREWORKS/product-featured-210.jpg"},
-  {"name": "FENTA SKY(5PCS)", "package": "1BOX", "actualPrice": 440, "discountPrice": 220, "image": "FANCY FIREWORKS/product-featured-240.jpg"},
+  {"name": "FLOWER RAIN(2PCS)", "package": "1BOX", "actualPrice": 440, "discountPrice": 220, "image": "FANCY FIREWORKS/product-featured-240.jpg"},
   {"name": "PEP (2PC)", "package": "1BOX", "actualPrice": 382, "discountPrice": 130, "image": "FANCY FIREWORKS/product-featured-214.jpg"},
-  {"name": "HAPPY DREAMS (1PC)", "package": "1BOX", "actualPrice": 488, "discountPrice": 244, "image": "FANCY FIREWORKS/product-featured-215.jpg"},
+  {"name": "OLD IS GOLD COLOR PAPER BLAST(1PC)", "package": "1BOX", "actualPrice": 488, "discountPrice": 244, "image": "FANCY FIREWORKS/product-featured-215.jpg"},
   {"name": "CLUSTER BLASTER (1PC)", "package": "1BOX", "actualPrice": 494, "discountPrice": 247, "image": "FANCY FIREWORKS/product-featured-216.jpg"},
   {"name": "GOLDEN WHISTLE SMALL (5PCS)", "package": "1BOX", "actualPrice": 546, "discountPrice": 273, "image": "FANCY FIREWORKS/product-featured-219.jpg"},
   {"name": "MINE OF SHOTS (5PCS)", "package": "1BOX", "actualPrice": 690, "discountPrice": 345, "image": "FANCY FIREWORKS/product-featured-217.jpg"},
   {"name": "MINE OF STARS (10PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 346, "image": "FANCY FIREWORKS/product-featured-218.jpg"},
   {"name": "SEVEN SHOTS (5PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 346, "image": "FANCY FIREWORKS/product-featured-228.jpg"},
-  {"name": "COLOUR CHANGING BUTTERFLY (10PCS)", "package": "1BOX", "actualPrice": 134, "discountPrice": 67, "image": "FANCY FIREWORKS/product-featured-213.jpg"},
+  {"name": "COLOUR CHANGING BUTTERFLY (10PCS)", "package": "1BOX", "actualPrice": 400, "discountPrice": 198, "image": "FANCY FIREWORKS/product-featured-213.jpg"},
   {"name": "FIVE STAR (5PCS)", "package": "1BOX", "actualPrice": 148, "discountPrice": 74, "image": "FANCY FIREWORKS/product-featured-244.jpg"},
   {"name": "DIAMOND MINE (5PCS)", "package": "1BOX", "actualPrice": 224, "discountPrice": 112, "image": "FANCY FIREWORKS/product-featured-243.jpg"},
   {"name": "ROMAN CANDLES 6BALLS (2PCS)", "package": "1BOX", "actualPrice": 234, "discountPrice": 117, "image": "FANCY FIREWORKS/product-featured-223.jpg"},
@@ -168,26 +168,26 @@ const productData = {
   {"name": "GOLD RUSH (5PCS)", "package": "1BOX", "actualPrice": 690, "discountPrice": 345, "image": "FANCY FIREWORKS/product-featured-227.jpg"},
   {"name": "AERIAL OUTS (5PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 346, "image": "FANCY FIREWORKS/product-featured-302.jpg"},
   {"name": "TREASURE BOX (5PCS)", "package": "1BOX", "actualPrice": 692, "discountPrice": 346, "image": "FANCY FIREWORKS/product-featured-303.jpg"},
-  {"name": "GOLDEN WHISTLE GIANT (2PCS)", "package": "1BOX", "actualPrice": 134, "discountPrice": 67, "image": "FANCY FIREWORKS/product-featured-221.jpg"},
+  {"name": "GOLDEN WHISTLE GIANT (2PCS)", "package": "1BOX", "actualPrice": 380, "discountPrice": 140, "image": "FANCY FIREWORKS/product-featured-221.jpg"},
   {"name": "GOLDEN DROPS (5PCS)", "package": "1BOX", "actualPrice": 148, "discountPrice": 74, "image": "FANCY FIREWORKS/product-featured-300.jpg"},
   {"name": "HAPPY BIRTHDAY (1PC)", "package": "1BOX", "actualPrice": 224, "discountPrice": 112, "image": "FANCY FIREWORKS/product-featured-234.jpg"},
   {"name": "KRAK JACK (3PCS)", "package": "1BOX", "actualPrice": 234, "discountPrice": 117, "image": "FANCY FIREWORKS/product-featured-241.jpg"},
   {"name": "MAGIC TREE (2PCS)", "package": "1BOX", "actualPrice": 234, "discountPrice": 117, "image": "FANCY FIREWORKS/product-featured-230.jpg"},
   {"name": "FLYING BALLOON (1PC)", "package": "1BOX", "actualPrice": 306, "discountPrice": 153, "image": "FANCY FIREWORKS/product-featured-232.jpg"},
-  {"name": "RANGOLI (50PCS)", "package": "1BOX", "actualPrice": 340, "discountPrice": 170, "image": "FANCY FIREWORKS/product-featured-231.jpg"}
+  {"name": "MULTI COLOR FALLS (1PCS)", "package": "1BOX", "actualPrice": 1700, "discountPrice": 900, "image": "FANCY FIREWORKS/product-featured-231.jpg"}
   ],
 
-  "COMETS/PIPE SKY SHOT": [
-  {"name": "1 INCH COMETS (10VARIANTS)(1PCS)", "package": "1BOX", "actualPrice": 1180, "discountPrice": 590, "image": "COMETSPIPE SKY SHOT/product-featured-105.jpg"},
-  {"name": "1.25 INCH COMETS (10VARIANTS)(1PCS)", "package": "1BOX", "actualPrice": 1580, "discountPrice": 790, "image": "COMETSPIPE SKY SHOT/product-featured-106.jpg"},
-  {"name": "AVENGERS SPECIAL(1PCE)-1.25", "package": "1BOX", "actualPrice": 1700, "discountPrice": 850, "image": "COMETSPIPE SKY SHOT/product-featured-335.jpg"},
-  {"name": "1.5 INCH COMETS (20 VARIANTS)", "package": "1BOX", "actualPrice": 2100, "discountPrice": 1050, "image": "COMETSPIPE SKY SHOT/product-featured-107.jpg"},
-  {"name": "PEONY(1PCE)-1.25", "package": "1BOX", "actualPrice": 2500, "discountPrice": 1250, "image": "COMETSPIPE SKY SHOT/product-featured-336.jpg"},
-  {"name": "PANDAV(5PCS)", "package": "1BOX", "actualPrice": 2860, "discountPrice": 1430, "image": "COMETSPIPE SKY SHOT/product-featured-17.jpg"},
-  {"name": "1.75 INCH COMETS(1PC)", "package": "1BOX", "actualPrice": 3480, "discountPrice": 1740, "image": "COMETSPIPE SKY SHOT/product-featured-349.jpg"},
-  {"name": "2 INCH COMETS (11 VARIANTS)(1PC)", "package": "1BOX", "actualPrice": 3760, "discountPrice": 1880, "image": "COMETSPIPE SKY SHOT/product-featured-108.jpg"},
-  {"name": "3 INCH COMETS (26 VARIANTS) (1PC)", "package": "1BOX", "actualPrice": 5150, "discountPrice": 2575, "image": "COMETSPIPE SKY SHOT/product-featured-109.jpg"},
-  {"name": "STARFIRE COMETS(10PCS)", "package": "1BOX", "actualPrice": 9180, "discountPrice": 4590, "image": "COMETSPIPE SKY SHOT/product-featured-104.jpg"}
+  "COMETS/COLRFUL FOUNTAINS": [
+  {"name": "PEACOCK FEATHER-MAGICAL(1PCS)", "package": "1BOX", "actualPrice": 600, "discountPrice": 300, "image": "COMETSPIPE SKY SHOT/product-featured-105.jpg"},
+  {"name": "2 IN 1 FLOWER POT (10PCS)", "package": "1BOX", "actualPrice": 1100, "discountPrice": 530, "image": "COMETSPIPE SKY SHOT/product-featured-106.jpg"},
+  {"name": "3 WONDERS (3 IN 1)FOUNTAIN(1PCS)", "package": "1BOX", "actualPrice":550, "discountPrice": 265, "image": "COMETSPIPE SKY SHOT/product-featured-335.jpg"},
+  {"name": "4 SQUARE (4 IN 1) FOUNTAIN(1BOX)", "package": "1BOX", "actualPrice": 620, "discountPrice": 310, "image": "COMETSPIPE SKY SHOT/product-featured-107.jpg"},
+  {"name": "6 INCH WATER QUEEN FOUNTAIN(1PCS)", "package": "1BOX", "actualPrice": 400, "discountPrice": 200, "image": "COMETSPIPE SKY SHOT/product-featured-336.jpg"},
+  {"name": " ANGRY BIRD PANDAV FOUNTAIN(5PCS)", "package": "1BOX", "actualPrice": 400, "discountPrice": 200, "image": "COMETSPIPE SKY SHOT/product-featured-17.jpg"},
+  {"name": "CANDY CRUSH 5-COLORS(5PCS)", "package": "1BOX", "actualPrice": 580, "discountPrice": 280, "image": "COMETSPIPE SKY SHOT/product-featured-349.jpg"},
+  {"name": "MAGIC MELODY -5 IN1(5PCS)", "package": "1BOX", "actualPrice": 420, "discountPrice": 210, "image": "COMETSPIPE SKY SHOT/product-featured-108.jpg"},
+  {"name": "MAGIC SPRING FOUNTAIN (6PCS)", "package": "1BOX", "actualPrice": 1600, "discountPrice": 740, "image": "COMETSPIPE SKY SHOT/product-featured-109.jpg"},
+  {"name": "7G FOUNTAIN -MEGA", "package": "1BOX", "actualPrice": 2000, "discountPrice": 1000, "image": "COMETSPIPE SKY SHOT/product-featured-104.jpg"}
 ],
 
  "MULTICOLOUR 12 SHOTS (5 VARIANTS)": [
@@ -247,7 +247,7 @@ const productData = {
   {"name": "240 SHOTS RAINBOW DANCE", "package": "1BOX", "actualPrice": 6500, "discountPrice": 3800, "image": "MULTICOLOUR 240 SHOTS/product-featured-21.jpg"},
   ],
 
- "0.75 MEGA CAKES": [
+ "GROUND FANCY COLLECTION": [
   {"name": "GRAPE GARDEN 12", "package": "1BOX", "actualPrice": 148, "discountPrice": 74, "image": "0.75 MEGA CAKES/product-featured-331.jpg"},
   {"name": "ROSE GARDEN 12", "package": "1BOX", "actualPrice": 172, "discountPrice": 86, "image": "0.75 MEGA CAKES/product-featured-332.jpg"},
   {"name": "MUSIC PARTY 12", "package": "1BOX", "actualPrice": 192, "discountPrice": 96, "image": "0.75 MEGA CAKES/product-featured-333.jpg"},
