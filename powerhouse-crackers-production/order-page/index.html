@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Powerhouse FireWorks - Order Now</title>
-    <meta name="description" content="Submit your order quickly and easily through our secure order page at Powerhouse.">
+    <title>Powerhouse FireWorks - Reserve Now</title>
+    <meta name="description" content="Submit your Reserve quickly and easily through our secure Reserve page at Powerhouse.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="../logo.jpg">
 </head>
@@ -57,18 +57,18 @@
                             <li><button class="category-btn" data-category="COLOUR SMOKE">Colour Smoke</button></li>
                             <li><button class="category-btn" data-category="PAPER/CONFETTI">Paper/Confetti</button></li>
                             <li><button class="category-btn" data-category="FANCY FIREWORKS">Fancy FireWorks</button></li>
-                            <li><button class="category-btn" data-category="COMETS/PIPE SKY SHOT">Comets/Pipe Sky Shot</button></li>
+                            <li><button class="category-btn" data-category="COMETS/COLORFULL FOUNTAINS">Comets Colourfull Fountains</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 12 SHOTS (5 VARIANTS)">Multicolour 12 Shots (5 Variants)</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 20 SHOTS (4 VARIANTS)">Multicolour 20 Shots (4 Variants)</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 25 SHOTS (3 VARIANTS)">Multicolour 25 Shots (3 Variants)</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 30 SHOTS (3 VARIANTS)">Multicolour 30 Shots (3 Variants)</button></li>
-                            <li><button class="category-btn" data-category="MULTICOLOUR 40 SHOTS (5 VARIANTS)">Multicolour 40 Shots (5 Variants)</button></li>
+                            <!-- <li><button class="category-btn" data-category="MULTICOLOUR 40 SHOTS (5 VARIANTS)">Multicolour 40 Shots (5 Variants)</button></li> -->
                             <li><button class="category-btn" data-category="MULTICOLOUR 60 SHOTS (4 VARIANTS)">Multicolour 60 Shots (4 Variants)</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 80 SHOTS (2 VARIANTS)">Multicolour 80 Shots (2 Variants)</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 100 SHOTS (5 VARIANTS)">Multicolour 100 Shots (5 Variants)</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 120 SHOTS (3 VARIANTS)">Multicolour 120 Shots (3 Variants)</button></li>
                             <li><button class="category-btn" data-category="MULTICOLOUR 240 SHOTS">Multicolour 240 Shots</button></li>
-                            <li><button class="category-btn" data-category="0.75 MEGA CAKES">0.75 Mega Cakes</button></li>
+                            <li><button class="category-btn" data-category="GROUND FANCY COLLECTION">Ground Fancy Collection</button></li>
                             <li><button class="category-btn" data-category="1.25 MEGA CAKES">1.25 Mega Cakes</button></li>
                             <li><button class="category-btn" data-category="0.75 PREMIUM CAKES">0.75 Premium Cakes</button></li>
                             <li><button class="category-btn" data-category="GIFT BOXES">Gift Boxes</button></li>
@@ -137,10 +137,6 @@
                     <span>You Save:</span>
                     <span id="savings">₹0</span>
                 </div>
-                <div class="summary-row deliveryCharge">
-                    <span>Delivery Charge:</span>
-                    <span id="deliveryCharges">₹50</span>
-                </div>
                 <div class="summary-row total">
                     <span>Total:</span>
                     <span id="totalPrice">₹0</span>
@@ -173,7 +169,7 @@
                         <input type="email" class="form-control" id="customerEmail" placeholder="Enter your email (optional)">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="deliveryAddress">Delivery Address *</label>
+                        <label class="form-label" for="deliveryAddress">Address *</label>
                         <textarea class="form-control" id="deliveryAddress" rows="3" required placeholder="Enter Address"></textarea>
                     </div>
                     <div class="form-group">
@@ -197,25 +193,21 @@
                     <div class="payment-note">
                         <p><strong>Note:</strong> Cash on delivery is not available. Payment must be made via Google Pay or Bank Transfer before delivery.</p>
                     </div>
-                    <div class="order-summary">
-                        <h4>Order Summary</h4>
+                    <div class="Reserve-summary">
+                        <h4>Reserve Summary</h4>
                         <div class="checkout-items" id="checkoutItems"></div>
                         <div class="checkout-total">
                             <div class="summary-row">
                                 <span>Total Items:</span>
                                 <span id="checkoutItemCount">0</span>
                             </div>
-                            <div class="summary-row deliveryCharge">
-                             <span>Delivery Charge:</span>
-                            <span id="deliveryCharges">₹50</span>
-                             </div>
                             <div class="summary-row total">
                                 <span>Total Amount:</span>
                                 <span id="checkoutTotal">₹0</span>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--full-width">Place Order</button>
+                    <button type="submit" class="btn btn--primary btn--full-width">Place Reserve</button>
                 </form>
             </div>
         </div>
@@ -231,6 +223,14 @@
                     <div class="footer__brand">
                         <h3>POWERHOUSE FIREWORKS</h3>
                         <p>Premium quality fireworks with environmental responsibility</p>
+                        <div style="display: flex; gap: 0.7rem;">
+                            <img src="../phone-call.png" alt="" style="width: 20px; height: 20px; border-radius: 50%;">
+                            <p>7904399942</p>
+                        </div>
+                        <div style="display: flex; gap: 0.7rem;">
+                            <img src="../location.png" alt="" style="width: 20px; height: 20px; border-radius: 50%;">
+                            <p>Chinnasalem</p>
+                        </div>
                     </div>
                     <div class="footer__links">
                         <div class="footer__section">
@@ -247,7 +247,7 @@
                             <ul>
                                 <li>Premium Fireworks</li>
                                 <li>Green Crackers</li>
-                                <li>Bulk Orders</li>
+                                <li>Bulk Reserves</li>
                                 <li>Custom Packages</li>
                             </ul>
                         </div>
