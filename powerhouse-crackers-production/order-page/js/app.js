@@ -6,8 +6,8 @@ const coupons = {
 // Product data from Powerhouse Crackers
 const productData = {
   "SPARKLERS": [
-    {"name": "BOBY GOLD SPARKLERS 7CM(10pcs)", "package": "1BOX", "actualPrice": 50, "discountPrice": 15, "image": "SPARKLERS/image_5.jpg"},
-    {"name": "BOBBY CRACKLINGS SPARKLERS 10CM(10PCS)", "package": "1BOX", "actualPrice": 62, "discountPrice":18 , "image": "SPARKLERS/product-featured-111.jpg"},
+    {"name": "BOBY GOLD SPARKLERS 7CM(10pcs)", "package": "1BOX", "actualPrice": 50, "discountPrice": 18, "image": "SPARKLERS/image_5.jpg"},
+    {"name": "BOBBY CRACKLINGS SPARKLERS 10CM(10PCS)", "package": "1BOX", "actualPrice": 62, "discountPrice":22 , "image": "SPARKLERS/product-featured-111.jpg"},
     {"name": "12CM 4 COLOUR SPARKLERS (10PCS)", "package": "1BOX", "actualPrice": 100, "discountPrice": 32, "image": "SPARKLERS/product-featured-295.jpg"},
     {"name": "12CM RED SPARKLERS (10PCS)", "package": "1BOX", "actualPrice": 108, "discountPrice": 34, "image": "SPARKLERS/product-featured-344.jpg"},
     {"name": "LEMON TREE SPARKLERS 15CM(10PCS)", "package": "1BOX", "actualPrice": 150, "discountPrice": 56, "image": "SPARKLERS/product-featured-122.jpg"},
@@ -80,7 +80,7 @@ const productData = {
   ],
 
   "SOUND CRACKERS": [
-    {"name": "SPARROW 2.25", "package": "1PKT", "actualPrice": 66, "discountPrice": 12, "image": "SOUND CRACKERS/product-featured-8.jpg"},
+    {"name": "SPARROW 2.25", "package": "1PKT", "actualPrice": 66, "discountPrice": 15, "image": "SOUND CRACKERS/product-featured-8.jpg"},
     {"name": "3.5 LAKSHMI ", "package": "1PKT", "actualPrice": 80, "discountPrice": 18, "image": "SOUND CRACKERS/product-featured-172.jpg"},
     {"name": "4 LAKSHMI ", "package": "1PKT", "actualPrice": 89, "discountPrice": 24, "image": "SOUND CRACKERS/product-featured-173.jpg"},
     {"name": "GOLD LAKSHMI", "package": "1PKT", "actualPrice": 110, "discountPrice": 30, "image": "SOUND CRACKERS/product-featured-174.jpg"},
@@ -92,10 +92,10 @@ const productData = {
   ],
 
   "BIJILI": [
-    {"name": "BIJILI RED(50PCS)", "package": "1PKT", "actualPrice": 90, "discountPrice": 25, "image": "BIJILI/product-featured-9.jpg"},
+    {"name": "BIJILI RED(50PCS)", "package": "1PKT", "actualPrice": 90, "discountPrice": 40, "image": "BIJILI/product-featured-9.jpg"},
    // {"name": "GIANT BIJILI (50PCS)", "package": "1PKT", "actualPrice": 142, "discountPrice": 52, "image": "BIJILI/product-featured-327.jpg"},
     //{"name": "RED BIJILI (100PCS)", "package": "1PKT", "actualPrice": 170, "discountPrice": 85, "image": "BIJILI/product-featured-180.jpg"},
-    {"name": "STRIPPED BIJILI(100PCS)", "package": "1PKT", "actualPrice": 198, "discountPrice": 46, "image": "BIJILI/product-featured-298.jpg"}
+    {"name": "STRIPPED BIJILI(100PCS)", "package": "1PKT", "actualPrice": 198, "discountPrice": 70, "image": "BIJILI/product-featured-298.jpg"}
   ],
 
  "BOMBS": [
@@ -140,7 +140,7 @@ const productData = {
   ],
 
 "FANCY FIREWORKS": [
-  {"name": "CHOTTA FANCY", "package": "1BOX", "actualPrice": 170, "discountPrice": 85, "image": "FANCY FIREWORKS/product-featured-16.jpg"},
+  {"name": "CHOTTA FANCY", "package": "1BOX", "actualPrice": 170, "discountPrice": 100, "image": "FANCY FIREWORKS/product-featured-16.jpg"},
   {"name": "2FANCY", "package": "1BOX", "actualPrice": 148, "discountPrice": 99, "image": "FANCY FIREWORKS/product-featured-206.jpg"},
   {"name": "3.5 FANCY ", "package": "1BOX", "actualPrice": 300, "discountPrice": 260, "image": "FANCY FIREWORKS/product-featured-205.jpg"},
   {"name": "3 FANCY (3 PCS)", "package": "1BOX", "actualPrice": 800, "discountPrice": 410, "image": "FANCY FIREWORKS/product-featured-208.jpg"},
@@ -375,8 +375,8 @@ const productData = {
   {"name": "24 DELUX", "package": "1BUNDLE", "actualPrice": 2100, "discountPrice": 550, "image": "CELEBRATION CRACKERS/product-featured-328.jpg"},
   {"name": "50 DELUX", "package": "1BUNDLE", "actualPrice": 2500, "discountPrice": 600, "image": "CELEBRATION CRACKERS/product-featured-329.jpg"},
   {"name": "100 DELUX", "package": "1BUNDLE", "actualPrice": 2860, "discountPrice": 710, "image": "CELEBRATION CRACKERS/product-featured-341.jpg"},
-  {"name": "1000(1K)", "package": "1BUNDLE", "actualPrice": 3480, "discountPrice": 390, "image": "CELEBRATION CRACKERS/product-featured-292.jpg"},
-  {"name": "2000(2K)", "package": "1BUNDLE", "actualPrice": 3760, "discountPrice": 570, "image": "CELEBRATION CRACKERS/product-featured-294.jpg"},
+  {"name": "1000(1K)", "package": "1BUNDLE", "actualPrice": 3480, "discountPrice": 700, "image": "CELEBRATION CRACKERS/product-featured-292.jpg"},
+  {"name": "2000(2K)", "package": "1BUNDLE", "actualPrice": 3760, "discountPrice": 1099, "image": "CELEBRATION CRACKERS/product-featured-294.jpg"},
   {"name": "5000(5K)", "package": "1BUNDLE", "actualPrice": 5150, "discountPrice": 2575, "image": "CELEBRATION CRACKERS/product-featured-291.jpg"},
   {"name": "10000(10K)", "package": "1BUNDLE", "actualPrice": 9180, "discountPrice": 4590, "image": "CELEBRATION CRACKERS/product-featured-293.jpg"}
   ],
